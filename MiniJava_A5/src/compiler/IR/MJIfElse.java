@@ -26,7 +26,7 @@ public class MJIfElse extends MJIf {
 	}
 
 	MJType typeCheck() throws TypeCheckerException {
-		
+		super.typeCheck();
 		elseblock.typeCheck();
 		// here you should enter the code to type check this class
 		
@@ -36,21 +36,15 @@ public class MJIfElse extends MJIf {
 	void variableInit(HashSet<MJVariable> initialized)
 			throws TypeCheckerException {
 		
-		LinkedList<MJVariable> thenList = thenblock.getVariables();
-		LinkedList<MJVariable> elseList = elseblock.getVariables();
-		for(MJVariable thenb : thenList)
-		{
-			for(MJVariable elseb : elseList)
-			{
-				if(thenb.equals(elseb)){
-					elseb.variableInit(initialized);
-					thenb.variableInit(initialized);
-				}
-			}
-		}
-//		elseblock.variableInit(initialized);
-//		thenblock.variableInit(initialized);
-		// here you should enter the code to check whether all variables are initialized
+		// Checks if variables are initialized
+		HashSet<MJVariable> einit = (HashSet<MJVariable>)initialized.clone();
+		elseblock.variableInit(einit);
+		
+		HashSet<MJVariable> tinit = (HashSet<MJVariable>)initialized.clone();
+		thenblock.variableInit(tinit);
+		
+		tinit.retainAll(einit);
+		initialized = tinit;
+		
 	}
-
 }
