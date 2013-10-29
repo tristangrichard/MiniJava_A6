@@ -1,6 +1,7 @@
 package compiler.IR;
 
 import java.util.HashSet;
+import java.util.LinkedList;
 
 import compiler.PrettyPrinter;
 import compiler.Exceptions.TypeCheckerException;
@@ -35,8 +36,20 @@ public class MJIfElse extends MJIf {
 	void variableInit(HashSet<MJVariable> initialized)
 			throws TypeCheckerException {
 		
-		elseblock.variableInit(initialized);
-		thenblock.variableInit(initialized);
+		LinkedList<MJVariable> thenList = thenblock.getVariables();
+		LinkedList<MJVariable> elseList = elseblock.getVariables();
+		for(MJVariable thenb : thenList)
+		{
+			for(MJVariable elseb : elseList)
+			{
+				if(thenb.equals(elseb)){
+					elseb.variableInit(initialized);
+					thenb.variableInit(initialized);
+				}
+			}
+		}
+//		elseblock.variableInit(initialized);
+//		thenblock.variableInit(initialized);
 		// here you should enter the code to check whether all variables are initialized
 	}
 
