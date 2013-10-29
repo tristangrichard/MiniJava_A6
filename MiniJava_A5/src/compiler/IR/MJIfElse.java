@@ -36,6 +36,7 @@ public class MJIfElse extends MJIf {
 	void variableInit(HashSet<MJVariable> initialized)
 			throws TypeCheckerException {
 		
+		// gets the variables located both in if and else blocks, and initializes the ones they have in common
 		LinkedList<MJVariable> thenList = thenblock.getVariables();
 		LinkedList<MJVariable> elseList = elseblock.getVariables();
 		for(MJVariable thenb : thenList)
@@ -48,9 +49,6 @@ public class MJIfElse extends MJIf {
 				}
 			}
 		}
-//		elseblock.variableInit(initialized);
-//		thenblock.variableInit(initialized);
-		// here you should enter the code to check whether all variables are initialized
 	}
 
 }
