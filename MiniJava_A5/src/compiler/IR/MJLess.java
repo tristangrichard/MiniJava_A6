@@ -18,11 +18,12 @@ public class MJLess extends MJBinaryOp {
 	}
 
 	MJType typeCheck() throws TypeCheckerException {
+		this.type = this.lhs.typeCheck();
 		
 		// here you should enter the code to type check this class
 		if (this.lhs.typeCheck().isInt() && this.rhs.typeCheck().isInt())
 		{
-			return MJType.getVoidType();
+			return MJType.getBooleanType();
 		}
 		else {
 			throw new TypeCheckerException("both lhs and rhs need to be integers");

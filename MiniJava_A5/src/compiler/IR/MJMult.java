@@ -18,10 +18,11 @@ public class MJMult extends MJBinaryOp {
 	}
 
 	MJType typeCheck() throws TypeCheckerException {
+		this.type = this.lhs.typeCheck();
 		
 		// checks if both sides are of type int
 		if (this.lhs.typeCheck().isInt() && this.rhs.typeCheck().isInt()){
-			return MJType.getVoidType();
+			return MJType.getIntType();
 		}
 		else{
 			throw new TypeCheckerException("both lhs and rhs need to be integers");
