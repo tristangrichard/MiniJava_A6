@@ -32,9 +32,15 @@ public class MJWhile extends MJStatement {
 	
 	MJType typeCheck() throws TypeCheckerException {
 		
-		this.body.typeCheck();// here you should enter the code to type check this class
-		this.condition.typeCheck();
-		
+		// checks if the condition is of type booleans
+		if(this.condition.typeCheck().isBoolean())
+		{
+			this.body.typeCheck();	
+		}
+		else
+		{
+			throw new TypeCheckerException("condition must be of type boolean");
+		}
 		return MJType.getVoidType();
 	}
 
