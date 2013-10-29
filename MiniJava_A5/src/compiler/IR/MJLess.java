@@ -20,13 +20,20 @@ public class MJLess extends MJBinaryOp {
 	MJType typeCheck() throws TypeCheckerException {
 		
 		// here you should enter the code to type check this class
-		
-		return MJType.getVoidType();
+		if (this.lhs.typeCheck().isInt() && this.rhs.typeCheck().isInt())
+		{
+			return MJType.getVoidType();
+		}
+		else {
+			throw new TypeCheckerException("both lhs and rhs need to be integers");
+		}
 	}
 
 	void variableInit(HashSet<MJVariable> initialized)
 			throws TypeCheckerException {
 		
+		this.lhs.variableInit(initialized);
+		this.rhs.variableInit(initialized);
 		// here you should enter the code to check whether all variables are initialized
 	}
 

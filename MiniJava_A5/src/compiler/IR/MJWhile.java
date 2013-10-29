@@ -32,7 +32,8 @@ public class MJWhile extends MJStatement {
 	
 	MJType typeCheck() throws TypeCheckerException {
 		
-		// here you should enter the code to type check this class
+		this.body.typeCheck();// here you should enter the code to type check this class
+		this.condition.typeCheck();
 		
 		return MJType.getVoidType();
 	}
@@ -40,6 +41,8 @@ public class MJWhile extends MJStatement {
 	void variableInit(HashSet<MJVariable> initialized)
 			throws TypeCheckerException {
 		
+		this.condition.variableInit(initialized);
+		this.body.variableInit(initialized);
 		// here you should enter the code to check whether all variables are initialized
 	}
 

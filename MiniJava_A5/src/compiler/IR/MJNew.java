@@ -12,11 +12,11 @@ public class MJNew extends MJExpression {
 
 	private LinkedList<MJExpression> arglist;
 	private MJMethod target;
-	
+
 	public MJNew(MJType type) {
 		this(type, new LinkedList<MJExpression>());
 	}
-	
+
 	public MJNew(MJType type, LinkedList<MJExpression> arglist) {
 		this.type = type;
 		this.arglist = arglist;
@@ -41,15 +41,27 @@ public class MJNew extends MJExpression {
 	}
 
 	MJType typeCheck() throws TypeCheckerException {
-		
-		// here you should enter the code to type check this class
-		
-		return MJType.getVoidType();
+
+		// checks if target is of type class. and typechecks all arguments
+		if(this.target.typeCheck().isClass()){
+			for (MJExpression arg : arglist) {
+				arg.typeCheck();	
+			}
+			return MJType.getVoidType();
+		}
+		else{	
+			throw new TypeCheckerException(this.target.getName()+" is not of type class");
+		}
 	}
 
 	void variableInit(HashSet<MJVariable> initialized)
 			throws TypeCheckerException {
 		
+		this.target.variableInit(initialized);
+		
+		for (MJExpression arg : arglist) {
+			arg.variableInit(initialized);	
+		}
 		// here you should enter the code to check whether all variables are initialized
 	}
 

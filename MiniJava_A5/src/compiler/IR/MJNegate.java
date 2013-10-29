@@ -17,16 +17,23 @@ public class MJNegate extends MJUnaryOp {
 	}
 
 	MJType typeCheck() throws TypeCheckerException {
-		
-		// here you should enter the code to type check this class
-		
-		return MJType.getVoidType();
+
+		// checks if arg is boolean or int, throws exception if not either.
+		if (this.arg.typeCheck().isInt() || this.arg.typeCheck().isBoolean())
+		{
+			return MJType.getVoidType();
+		}
+		else{
+			throw new TypeCheckerException("arg to negate should be int or boolean");
+		}
 	}
 
 	void variableInit(HashSet<MJVariable> initialized)
 			throws TypeCheckerException {
 		
-		// here you should enter the code to check whether all variables are initialized
+		//throws typechecker expeption if not initialized
+		this.arg.variableInit(initialized);
+
 	}
 
 }

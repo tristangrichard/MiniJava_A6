@@ -14,7 +14,7 @@ public class MJIf extends MJStatement {
 		this.condition = condition;
 		this.thenblock = thenblock;
 	}
-	
+
 	public MJExpression getCondition() {
 		return condition;
 	}
@@ -32,14 +32,23 @@ public class MJIf extends MJStatement {
 
 	MJType typeCheck() throws TypeCheckerException {
 		
-		// here you should enter the code to type check this class
-		
+		// checks if the condition is of type booleans
+		if(this.condition.typeCheck().isBoolean())
+		{
+			this.thenblock.typeCheck();	
+		}
+		else
+		{
+			throw new TypeCheckerException("condition must be of type boolean");
+		}
 		return MJType.getVoidType();
 	}
 
 	void variableInit(HashSet<MJVariable> initialized)
 			throws TypeCheckerException {
-		
+
+		this.condition.variableInit(initialized);
+		this.thenblock.variableInit(initialized);
 		// here you should enter the code to check whether all variables are initialized
 	}
 

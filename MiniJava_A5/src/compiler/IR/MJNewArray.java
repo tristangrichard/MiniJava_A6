@@ -21,16 +21,23 @@ public class MJNewArray extends MJNew {
 	}
 
 	MJType typeCheck() throws TypeCheckerException {
-		
-		// here you should enter the code to type check this class
-		
-		return MJType.getVoidType();
+
+		// checks if the size of the array is of type int
+		if(this.size.typeCheck().isInt())
+		{
+			return MJType.getVoidType();
+		}
+		else
+		{
+			throw new TypeCheckerException("size must be an integer");
+		}
 	}
 
 	void variableInit(HashSet<MJVariable> initialized)
 			throws TypeCheckerException {
 		
-		// here you should enter the code to check whether all variables are initialized
+		this.size.variableInit(initialized);
+		// checks if size is initialized to a value
 	}
 
 }
