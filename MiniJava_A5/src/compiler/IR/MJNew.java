@@ -43,25 +43,27 @@ public class MJNew extends MJExpression {
 
 		// Get the type of target object
 		this.type = type.typeCheck();
-		
+
 		// Checks if object is class and type checks all arguments
-		if(this.type.isClass()){
-			for (MJExpression arg : arglist) {
-				arg.typeCheck();	
-			}
-			return MJType.getVoidType();
-		}
-		else{	
-			throw new TypeCheckerException(this.target.getName()+" is not of type class");
+		for (MJExpression arg : arglist) {
+			arg.typeCheck();	
 		}
 		
+		try {
+			this.target = IR.classes.lookupConstructor(type.getDecl(), arglist);
+		} catch (ClassErrorMethod e) {
+			throw new TypeCheckerException(e.getMessage());
+		} catch (MethodNotFound e) {
+			throw new TypeCheckerException(e.getMessage());
+		}
+		return this.type;	
 	}
 
 	void variableInit(HashSet<MJVariable> initialized)
 			throws TypeCheckerException {
-		
+
 		this.target.variableInit(initialized);
-		
+
 		for (MJExpression arg : arglist) {
 			arg.variableInit(initialized);	
 		}

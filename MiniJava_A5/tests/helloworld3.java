@@ -2,15 +2,19 @@ class testmain {
 	
 	public static void main(String[] args) {
 	
+		
+//		System.out.println("Hello");
+//		System.out.println("World");
 		A a;
-		a = new A();
+		a = new A(5);
 	}
 }
 
 class A {
-	int a;
-	public void A(){
-		a = 2;
-		return;
+	
+	public A(int a)
+	{
+		System.out.println(a);
 	}
+	
 }

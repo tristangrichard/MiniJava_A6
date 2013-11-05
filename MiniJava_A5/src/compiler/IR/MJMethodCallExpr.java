@@ -44,6 +44,7 @@ public class MJMethodCallExpr extends MJExpression {
 		
 		// here you should enter the code to type check this class
 		
+		
 		return MJType.getVoidType();
 	}
 
