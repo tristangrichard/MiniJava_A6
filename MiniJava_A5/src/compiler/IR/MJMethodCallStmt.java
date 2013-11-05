@@ -2,7 +2,6 @@ package compiler.IR;
 
 import java.util.HashSet;
 import java.util.LinkedList;
-
 import compiler.PrettyPrinter;
 import compiler.Exceptions.ClassErrorMethod;
 import compiler.Exceptions.ClassNotFound;
@@ -45,18 +44,57 @@ public class MJMethodCallStmt extends MJStatement {
 		}
 		prepri.println(");");
 	}
-	
+
 	MJType typeCheck() throws TypeCheckerException {
-		
-		// here you should enter the code to type check this class
-		
-		return MJType.getVoidType();
+
+		MJClass decl = null;
+		MJClass cla = IR.currentClass;
+		MJIdentifier ident = this.method;
+		MJMethod meth;
+
+		if(ident instanceof MJSelector){
+
+			MJSelector sel = (MJSelector) ident;
+			MJType ty = sel.getObject().typeCheck();
+
+			if(ident.getType().isClass()){
+				decl = sel.getObject().typeCheck().getDecl();
+				cla = ty.getDecl();
+				ident = sel.getField();
+			}else throw	new TypeCheckerException(ident.getName()+" is not a Class");
+		}else {
+			if(ident.getName().equals("this"))
+			{
+				// Something should happen here
+			}else if (ident.getName().equals("super"))
+			{
+				// Something should happen here
+			}
+		}
+
+		for(MJExpression args : arglist)
+		{
+			args.typeCheck();
+		}
+
+		try {
+			meth = IR.classes.lookupMethod(decl, cla.getName(), arglist);
+		} catch (ClassErrorMethod e) {
+			throw new TypeCheckerException(e.getMessage());
+		} catch (MethodNotFound e) {
+			throw new TypeCheckerException(e.getMessage());
+		}
+		this.method.type = meth.getReturnType();
+		return this.method.type;
 	}
 
 	void variableInit(HashSet<MJVariable> initialized)
 			throws TypeCheckerException {
-		
-		// here you should enter the code to check whether all variables are initialized
+
+		this.method.variableInit(initialized);
+
+		for(MJExpression arg : arglist){
+			arg.variableInit(initialized);}
 	}
 
 }

@@ -2,6 +2,7 @@ package compiler.IR;
 
 import java.util.HashSet;
 import java.util.LinkedList;
+
 import compiler.PrettyPrinter;
 import compiler.Exceptions.ClassErrorMethod;
 import compiler.Exceptions.MethodNotFound;
@@ -48,9 +49,11 @@ public class MJNew extends MJExpression {
 		for (MJExpression arg : arglist) {
 			arg.typeCheck();	
 		}
-		
 		try {
-			this.target = IR.classes.lookupConstructor(type.getDecl(), arglist);
+			if(arglist.isEmpty()){
+				this.target = IR.classes.lookupConstructor(this.type.getDecl());
+			}else
+				this.target = IR.classes.lookupConstructor(this.type.getDecl(), arglist);
 		} catch (ClassErrorMethod e) {
 			throw new TypeCheckerException(e.getMessage());
 		} catch (MethodNotFound e) {

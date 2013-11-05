@@ -43,6 +43,7 @@ public class MJMethodCallExpr extends MJExpression {
 		MJClass decl = null;
 		MJClass cla = IR.currentClass;
 		MJIdentifier ident = this.method;
+		MJMethod meth;
 
 		if(ident instanceof MJSelector){
 
@@ -53,28 +54,37 @@ public class MJMethodCallExpr extends MJExpression {
 				decl = sel.getObject().typeCheck().getDecl();
 				cla = type.getDecl();
 				ident = sel.getField();
-			}	
+			}else throw	new TypeCheckerException(ident.getName()+" is not a Class");
+		}else {
+			if(ident.getName().equals("this"))
+			{
+				// Something should happen here
+			}else if (ident.getName().equals("super"))
+			{
+				// Something should happen here
+			}
 		}
-
 		for(MJExpression args : arglist)
 		{
 			args.typeCheck();
 		}
 
 		try {
-			IR.classes.lookupMethod(decl, cla.getName(), arglist);
+			meth = IR.classes.lookupMethod(decl, cla.getName(), arglist);
 		} catch (ClassErrorMethod e) {
 			throw new TypeCheckerException(e.getMessage());
 		} catch (MethodNotFound e) {
 			throw new TypeCheckerException(e.getMessage());
 		}
+		this.type = meth.getReturnType();
+		this.target = meth;
 		return this.type;
 	}
 
 	void variableInit(HashSet<MJVariable> initialized)
 			throws TypeCheckerException {
 
-		this.target.variableInit(initialized);
+		this.method.variableInit(initialized);
 		
 		for(MJExpression arg : arglist){
 			arg.variableInit(initialized);
