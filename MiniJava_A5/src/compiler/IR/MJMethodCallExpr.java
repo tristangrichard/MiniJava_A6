@@ -2,7 +2,6 @@ package compiler.IR;
 
 import java.util.HashSet;
 import java.util.LinkedList;
-
 import compiler.PrettyPrinter;
 import compiler.Exceptions.ClassErrorMethod;
 import compiler.Exceptions.ClassNotFound;
@@ -14,7 +13,6 @@ public class MJMethodCallExpr extends MJExpression {
 
 	private MJIdentifier method;
 	private LinkedList<MJExpression> arglist;
-
 	private MJMethod target;
 
 	public MJMethodCallExpr(MJIdentifier m, LinkedList<MJExpression> arglist) {
@@ -76,7 +74,10 @@ public class MJMethodCallExpr extends MJExpression {
 	void variableInit(HashSet<MJVariable> initialized)
 			throws TypeCheckerException {
 
-		// here you should enter the code to check whether all variables are initialized
+		this.target.variableInit(initialized);
+		
+		for(MJExpression arg : arglist){
+			arg.variableInit(initialized);
+		}
 	}
-
 }
