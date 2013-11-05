@@ -1,8 +1,16 @@
 class testmain {
 	
 	public static void main(String[] args) {
-		
-		System.out.print("Hello ");
-		System.out.println("World");
+	
+		A a;
+		a = new A();
+	}
+}
+
+class A {
+	int a;
+	public void A(){
+		a = 2;
+		return;
 	}
 }

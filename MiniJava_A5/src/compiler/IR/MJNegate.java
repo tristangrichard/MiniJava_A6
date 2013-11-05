@@ -17,9 +17,10 @@ public class MJNegate extends MJUnaryOp {
 	}
 
 	MJType typeCheck() throws TypeCheckerException {
-
+		// Save the type
+		this.type = this.arg.typeCheck();
 		// checks if arg is boolean or int, throws exception if not either.
-		if (this.arg.typeCheck().isInt() || this.arg.typeCheck().isBoolean())
+		if (this.type.isInt() || this.type.isBoolean())
 		{
 			return MJType.getVoidType();
 		}

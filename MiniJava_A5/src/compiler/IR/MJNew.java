@@ -2,7 +2,6 @@ package compiler.IR;
 
 import java.util.HashSet;
 import java.util.LinkedList;
-
 import compiler.PrettyPrinter;
 import compiler.Exceptions.ClassErrorMethod;
 import compiler.Exceptions.MethodNotFound;
@@ -42,8 +41,11 @@ public class MJNew extends MJExpression {
 
 	MJType typeCheck() throws TypeCheckerException {
 
-		// checks if target is of type class. and typechecks all arguments
-		if(this.target.typeCheck().isClass()){
+		// Get the type of target object
+		this.type = type.typeCheck();
+		
+		// Checks if object is class and type checks all arguments
+		if(this.type.isClass()){
 			for (MJExpression arg : arglist) {
 				arg.typeCheck();	
 			}
@@ -52,6 +54,7 @@ public class MJNew extends MJExpression {
 		else{	
 			throw new TypeCheckerException(this.target.getName()+" is not of type class");
 		}
+		
 	}
 
 	void variableInit(HashSet<MJVariable> initialized)

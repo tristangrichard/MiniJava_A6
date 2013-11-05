@@ -22,8 +22,11 @@ public class MJNewArray extends MJNew {
 
 	MJType typeCheck() throws TypeCheckerException {
 
+		// Gets the type of size
+		this.type = this.size.typeCheck();
+		
 		// checks if the size of the array is of type int
-		if(this.size.typeCheck().isInt())
+		if(this.type.isInt())
 		{
 			return MJType.getVoidType();
 		}
