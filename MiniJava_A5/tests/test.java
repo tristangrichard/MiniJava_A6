@@ -4,10 +4,8 @@ class testmain {
 		
 		A a;
 		String s;
-			
-		a = new A();
-		s = "!";
-		
+	    a = new A();
+	    s = "!";
 		a.x = 0;
 		
 		while ( a.x < 10) {

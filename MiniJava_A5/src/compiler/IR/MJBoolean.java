@@ -3,6 +3,8 @@ package compiler.IR;
 import java.util.HashSet;
 
 import compiler.PrettyPrinter;
+import compiler.CODE.CODE;
+import compiler.CODE.LC3.*;
 import compiler.Exceptions.*;
 
 public class MJBoolean extends MJExpression {
@@ -36,6 +38,10 @@ public class MJBoolean extends MJExpression {
 		}
 	}
 	
+	public MJExpression rewriteTwo() {
+		return this;
+	}
+
 	MJType typeCheck() throws TypeCheckerException {
 		
 		// this one is easy
@@ -48,6 +54,21 @@ public class MJBoolean extends MJExpression {
 		
 		// nothing to do here
 		return;
+	}
+
+	public int requiredStackSize() { 
+		return 1;
+	}
+
+	public void generateCode(CODE code) throws CodeGenException {
+		
+		code.comment(" BOOLEAN CONST "+this.value);
+		if (this.isTrue()) {
+			code.push(CODE.CONST1);						
+		} else {
+			code.push(CODE.CONST0);			
+		}
+		
 	}
 
 }

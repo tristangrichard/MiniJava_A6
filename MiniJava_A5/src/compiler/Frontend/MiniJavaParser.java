@@ -1,4 +1,4 @@
-// $ANTLR 3.5 /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g 2013-10-22 10:08:42
+// $ANTLR 3.5 /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g 2013-11-19 00:37:37
 
   package compiler.Frontend;
   
@@ -87,14 +87,14 @@ public class MiniJavaParser extends Parser {
 	}
 
 	@Override public String[] getTokenNames() { return MiniJavaParser.tokenNames; }
-	@Override public String getGrammarFileName() { return "/Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g"; }
+	@Override public String getGrammarFileName() { return "/Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g"; }
 
 
 
 
 
 	// $ANTLR start "program"
-	// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:17:1: program returns [MJProgram p] :mc= mainClass (cd= classDeclaration )* ;
+	// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:17:1: program returns [MJProgram p] :mc= mainClass (cd= classDeclaration )* ;
 	public final MJProgram program() throws RecognitionException {
 		MJProgram p = null;
 
@@ -103,8 +103,8 @@ public class MiniJavaParser extends Parser {
 		MJClass cd =null;
 
 		try {
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:18:3: (mc= mainClass (cd= classDeclaration )* )
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:18:5: mc= mainClass (cd= classDeclaration )*
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:18:3: (mc= mainClass (cd= classDeclaration )* )
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:18:5: mc= mainClass (cd= classDeclaration )*
 			{
 			 LinkedList<MJClass> cdl = new LinkedList<MJClass>(); 
 			pushFollow(FOLLOW_mainClass_in_program52);
@@ -112,7 +112,7 @@ public class MiniJavaParser extends Parser {
 			state._fsp--;
 
 			 cdl.add(mc); 
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:21:7: (cd= classDeclaration )*
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:21:7: (cd= classDeclaration )*
 			loop1:
 			while (true) {
 				int alt1=2;
@@ -123,7 +123,7 @@ public class MiniJavaParser extends Parser {
 
 				switch (alt1) {
 				case 1 :
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:21:9: cd= classDeclaration
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:21:9: cd= classDeclaration
 					{
 					pushFollow(FOLLOW_classDeclaration_in_program74);
 					cd=classDeclaration();
@@ -158,7 +158,7 @@ public class MiniJavaParser extends Parser {
 
 
 	// $ANTLR start "classDeclaration"
-	// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:29:1: classDeclaration returns [MJClass c] : 'class' cname= IDENT ( 'extends' scname= IDENT )? '{' (vd= varDeclaration )* (md= methodDeclaration )* '}' ;
+	// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:29:1: classDeclaration returns [MJClass c] : 'class' cname= IDENT ( 'extends' scname= IDENT )? '{' (vd= varDeclaration )* (md= methodDeclaration )* '}' ;
 	public final MJClass classDeclaration() throws RecognitionException {
 		MJClass c = null;
 
@@ -169,8 +169,8 @@ public class MiniJavaParser extends Parser {
 		MJMethod md =null;
 
 		try {
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:30:3: ( 'class' cname= IDENT ( 'extends' scname= IDENT )? '{' (vd= varDeclaration )* (md= methodDeclaration )* '}' )
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:30:5: 'class' cname= IDENT ( 'extends' scname= IDENT )? '{' (vd= varDeclaration )* (md= methodDeclaration )* '}'
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:30:3: ( 'class' cname= IDENT ( 'extends' scname= IDENT )? '{' (vd= varDeclaration )* (md= methodDeclaration )* '}' )
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:30:5: 'class' cname= IDENT ( 'extends' scname= IDENT )? '{' (vd= varDeclaration )* (md= methodDeclaration )* '}'
 			{
 			 String superClass = "Object"; 
 			      LinkedList<MJVariable> vdl = new LinkedList<MJVariable>();
@@ -178,7 +178,7 @@ public class MiniJavaParser extends Parser {
 			    
 			match(input,34,FOLLOW_34_in_classDeclaration126); 
 			cname=(Token)match(input,IDENT,FOLLOW_IDENT_in_classDeclaration132); 
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:34:27: ( 'extends' scname= IDENT )?
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:34:27: ( 'extends' scname= IDENT )?
 			int alt2=2;
 			int LA2_0 = input.LA(1);
 			if ( (LA2_0==36) ) {
@@ -186,7 +186,7 @@ public class MiniJavaParser extends Parser {
 			}
 			switch (alt2) {
 				case 1 :
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:34:29: 'extends' scname= IDENT
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:34:29: 'extends' scname= IDENT
 					{
 					match(input,36,FOLLOW_36_in_classDeclaration136); 
 					scname=(Token)match(input,IDENT,FOLLOW_IDENT_in_classDeclaration142); 
@@ -197,7 +197,7 @@ public class MiniJavaParser extends Parser {
 			}
 
 			match(input,49,FOLLOW_49_in_classDeclaration153); 
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:35:9: (vd= varDeclaration )*
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:35:9: (vd= varDeclaration )*
 			loop3:
 			while (true) {
 				int alt3=2;
@@ -244,7 +244,7 @@ public class MiniJavaParser extends Parser {
 				}
 				switch (alt3) {
 				case 1 :
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:35:11: vd= varDeclaration
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:35:11: vd= varDeclaration
 					{
 					pushFollow(FOLLOW_varDeclaration_in_classDeclaration161);
 					vd=varDeclaration();
@@ -261,7 +261,7 @@ public class MiniJavaParser extends Parser {
 				}
 			}
 
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:40:9: (md= methodDeclaration )*
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:40:9: (md= methodDeclaration )*
 			loop4:
 			while (true) {
 				int alt4=2;
@@ -272,7 +272,7 @@ public class MiniJavaParser extends Parser {
 
 				switch (alt4) {
 				case 1 :
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:40:11: md= methodDeclaration
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:40:11: md= methodDeclaration
 					{
 					pushFollow(FOLLOW_methodDeclaration_in_classDeclaration202);
 					md=methodDeclaration();
@@ -309,7 +309,7 @@ public class MiniJavaParser extends Parser {
 
 
 	// $ANTLR start "mainClass"
-	// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:50:1: mainClass returns [MJClass c] : 'class' cname= IDENT '{' 'public' 'static' 'void' 'main' '(' 'String[]' parname= IDENT ')' b= block '}' ;
+	// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:50:1: mainClass returns [MJClass c] : 'class' cname= IDENT '{' 'public' 'static' 'void' 'main' '(' 'String[]' parname= IDENT ')' b= block '}' ;
 	public final MJClass mainClass() throws RecognitionException {
 		MJClass c = null;
 
@@ -319,8 +319,8 @@ public class MiniJavaParser extends Parser {
 		MJBlock b =null;
 
 		try {
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:51:3: ( 'class' cname= IDENT '{' 'public' 'static' 'void' 'main' '(' 'String[]' parname= IDENT ')' b= block '}' )
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:51:5: 'class' cname= IDENT '{' 'public' 'static' 'void' 'main' '(' 'String[]' parname= IDENT ')' b= block '}'
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:51:3: ( 'class' cname= IDENT '{' 'public' 'static' 'void' 'main' '(' 'String[]' parname= IDENT ')' b= block '}' )
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:51:5: 'class' cname= IDENT '{' 'public' 'static' 'void' 'main' '(' 'String[]' parname= IDENT ')' b= block '}'
 			{
 			match(input,34,FOLLOW_34_in_mainClass256); 
 			cname=(Token)match(input,IDENT,FOLLOW_IDENT_in_mainClass262); 
@@ -364,7 +364,7 @@ public class MiniJavaParser extends Parser {
 
 
 	// $ANTLR start "block"
-	// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:66:1: block returns [MJBlock b] : '{' (vd= varDeclaration )* (sd= statement )* '}' ;
+	// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:66:1: block returns [MJBlock b] : '{' (vd= varDeclaration )* (sd= statement )* '}' ;
 	public final MJBlock block() throws RecognitionException {
 		MJBlock b = null;
 
@@ -373,14 +373,14 @@ public class MiniJavaParser extends Parser {
 		MJStatement sd =null;
 
 		try {
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:67:3: ( '{' (vd= varDeclaration )* (sd= statement )* '}' )
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:67:5: '{' (vd= varDeclaration )* (sd= statement )* '}'
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:67:3: ( '{' (vd= varDeclaration )* (sd= statement )* '}' )
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:67:5: '{' (vd= varDeclaration )* (sd= statement )* '}'
 			{
 			  LinkedList<MJVariable> vdl = new LinkedList<MJVariable>();
 			       LinkedList<MJStatement> sdl = new LinkedList<MJStatement>();    
 			    
 			match(input,49,FOLLOW_49_in_block339); 
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:70:9: (vd= varDeclaration )*
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:70:9: (vd= varDeclaration )*
 			loop5:
 			while (true) {
 				int alt5=2;
@@ -398,7 +398,7 @@ public class MiniJavaParser extends Parser {
 
 				switch (alt5) {
 				case 1 :
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:70:11: vd= varDeclaration
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:70:11: vd= varDeclaration
 					{
 					pushFollow(FOLLOW_varDeclaration_in_block347);
 					vd=varDeclaration();
@@ -413,7 +413,7 @@ public class MiniJavaParser extends Parser {
 				}
 			}
 
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:73:9: (sd= statement )*
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:73:9: (sd= statement )*
 			loop6:
 			while (true) {
 				int alt6=2;
@@ -424,7 +424,7 @@ public class MiniJavaParser extends Parser {
 
 				switch (alt6) {
 				case 1 :
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:73:11: sd= statement
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:73:11: sd= statement
 					{
 					pushFollow(FOLLOW_statement_in_block388);
 					sd=statement();
@@ -460,7 +460,7 @@ public class MiniJavaParser extends Parser {
 
 
 	// $ANTLR start "varDeclaration"
-	// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:82:1: varDeclaration returns [MJVariable vd] : t= type n= IDENT ';' ;
+	// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:82:1: varDeclaration returns [MJVariable vd] : t= type n= IDENT ';' ;
 	public final MJVariable varDeclaration() throws RecognitionException {
 		MJVariable vd = null;
 
@@ -469,8 +469,8 @@ public class MiniJavaParser extends Parser {
 		MJType t =null;
 
 		try {
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:83:3: (t= type n= IDENT ';' )
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:83:5: t= type n= IDENT ';'
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:83:3: (t= type n= IDENT ';' )
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:83:5: t= type n= IDENT ';'
 			{
 			pushFollow(FOLLOW_type_in_varDeclaration449);
 			t=type();
@@ -497,7 +497,7 @@ public class MiniJavaParser extends Parser {
 
 
 	// $ANTLR start "type"
-	// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:88:1: type returns [MJType t] : ( 'boolean' | 'int' | IDENT );
+	// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:88:1: type returns [MJType t] : ( 'boolean' | 'int' | IDENT );
 	public final MJType type() throws RecognitionException {
 		MJType t = null;
 
@@ -505,7 +505,7 @@ public class MiniJavaParser extends Parser {
 		Token IDENT1=null;
 
 		try {
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:89:3: ( 'boolean' | 'int' | IDENT )
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:89:3: ( 'boolean' | 'int' | IDENT )
 			int alt7=3;
 			switch ( input.LA(1) ) {
 			case 33:
@@ -530,21 +530,21 @@ public class MiniJavaParser extends Parser {
 			}
 			switch (alt7) {
 				case 1 :
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:89:5: 'boolean'
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:89:5: 'boolean'
 					{
 					match(input,33,FOLLOW_33_in_type482); 
 					 t = MJType.getBooleanType(); 
 					}
 					break;
 				case 2 :
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:91:5: 'int'
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:91:5: 'int'
 					{
 					match(input,39,FOLLOW_39_in_type494); 
 					 t = MJType.getIntType(); 
 					}
 					break;
 				case 3 :
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:93:5: IDENT
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:93:5: IDENT
 					{
 					IDENT1=(Token)match(input,IDENT,FOLLOW_IDENT_in_type507); 
 					 t = MJType.getClassType((IDENT1!=null?IDENT1.getText():null)); 
@@ -567,7 +567,7 @@ public class MiniJavaParser extends Parser {
 
 
 	// $ANTLR start "methodDeclaration"
-	// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:97:1: methodDeclaration returns [MJMethod md] : ( 'public' )? ( 'static' )? mtype= procType mname= IDENT '(' (t1= type n1= IDENT ( ',' t2= type n2= IDENT )* )? ')' '{' (vd= varDeclaration )* (sd= statement )* 'return' retExp= optExpression ';' '}' ;
+	// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:97:1: methodDeclaration returns [MJMethod md] : ( 'public' )? ( 'static' )? mtype= procType mname= IDENT '(' (t1= type n1= IDENT ( ',' t2= type n2= IDENT )* )? ')' '{' (vd= varDeclaration )* (sd= statement )* 'return' retExp= optExpression ';' '}' ;
 	public final MJMethod methodDeclaration() throws RecognitionException {
 		MJMethod md = null;
 
@@ -583,8 +583,8 @@ public class MiniJavaParser extends Parser {
 		MJExpression retExp =null;
 
 		try {
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:98:3: ( ( 'public' )? ( 'static' )? mtype= procType mname= IDENT '(' (t1= type n1= IDENT ( ',' t2= type n2= IDENT )* )? ')' '{' (vd= varDeclaration )* (sd= statement )* 'return' retExp= optExpression ';' '}' )
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:98:5: ( 'public' )? ( 'static' )? mtype= procType mname= IDENT '(' (t1= type n1= IDENT ( ',' t2= type n2= IDENT )* )? ')' '{' (vd= varDeclaration )* (sd= statement )* 'return' retExp= optExpression ';' '}'
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:98:3: ( ( 'public' )? ( 'static' )? mtype= procType mname= IDENT '(' (t1= type n1= IDENT ( ',' t2= type n2= IDENT )* )? ')' '{' (vd= varDeclaration )* (sd= statement )* 'return' retExp= optExpression ';' '}' )
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:98:5: ( 'public' )? ( 'static' )? mtype= procType mname= IDENT '(' (t1= type n1= IDENT ( ',' t2= type n2= IDENT )* )? ')' '{' (vd= varDeclaration )* (sd= statement )* 'return' retExp= optExpression ';' '}'
 			{
 			 LinkedList<MJVariable> parlist = new LinkedList<MJVariable>(); 
 			      boolean isStatic = false;
@@ -592,7 +592,7 @@ public class MiniJavaParser extends Parser {
 			      LinkedList<MJVariable> vdl = new LinkedList<MJVariable>();
 			      LinkedList<MJStatement> sdl = new LinkedList<MJStatement>();    
 			    
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:104:5: ( 'public' )?
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:104:5: ( 'public' )?
 			int alt8=2;
 			int LA8_0 = input.LA(1);
 			if ( (LA8_0==42) ) {
@@ -600,7 +600,7 @@ public class MiniJavaParser extends Parser {
 			}
 			switch (alt8) {
 				case 1 :
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:104:7: 'public'
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:104:7: 'public'
 					{
 					match(input,42,FOLLOW_42_in_methodDeclaration539); 
 					 isPublic = true; 
@@ -609,7 +609,7 @@ public class MiniJavaParser extends Parser {
 
 			}
 
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:105:5: ( 'static' )?
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:105:5: ( 'static' )?
 			int alt9=2;
 			int LA9_0 = input.LA(1);
 			if ( (LA9_0==44) ) {
@@ -617,7 +617,7 @@ public class MiniJavaParser extends Parser {
 			}
 			switch (alt9) {
 				case 1 :
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:105:7: 'static'
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:105:7: 'static'
 					{
 					match(input,44,FOLLOW_44_in_methodDeclaration552); 
 					 isStatic = true; 
@@ -632,7 +632,7 @@ public class MiniJavaParser extends Parser {
 
 			mname=(Token)match(input,IDENT,FOLLOW_IDENT_in_methodDeclaration573); 
 			match(input,17,FOLLOW_17_in_methodDeclaration580); 
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:108:7: (t1= type n1= IDENT ( ',' t2= type n2= IDENT )* )?
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:108:7: (t1= type n1= IDENT ( ',' t2= type n2= IDENT )* )?
 			int alt11=2;
 			int LA11_0 = input.LA(1);
 			if ( (LA11_0==IDENT||LA11_0==33||LA11_0==39) ) {
@@ -640,7 +640,7 @@ public class MiniJavaParser extends Parser {
 			}
 			switch (alt11) {
 				case 1 :
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:108:9: t1= type n1= IDENT ( ',' t2= type n2= IDENT )*
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:108:9: t1= type n1= IDENT ( ',' t2= type n2= IDENT )*
 					{
 					pushFollow(FOLLOW_type_in_methodDeclaration595);
 					t1=type();
@@ -648,7 +648,7 @@ public class MiniJavaParser extends Parser {
 
 					n1=(Token)match(input,IDENT,FOLLOW_IDENT_in_methodDeclaration601); 
 					 parlist.add(new MJVariable(t1,(n1!=null?n1.getText():null))); 
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:110:9: ( ',' t2= type n2= IDENT )*
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:110:9: ( ',' t2= type n2= IDENT )*
 					loop10:
 					while (true) {
 						int alt10=2;
@@ -659,7 +659,7 @@ public class MiniJavaParser extends Parser {
 
 						switch (alt10) {
 						case 1 :
-							// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:110:11: ',' t2= type n2= IDENT
+							// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:110:11: ',' t2= type n2= IDENT
 							{
 							match(input,21,FOLLOW_21_in_methodDeclaration624); 
 							pushFollow(FOLLOW_type_in_methodDeclaration630);
@@ -683,7 +683,7 @@ public class MiniJavaParser extends Parser {
 
 			match(input,18,FOLLOW_18_in_methodDeclaration677); 
 			match(input,49,FOLLOW_49_in_methodDeclaration684); 
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:115:9: (vd= varDeclaration )*
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:115:9: (vd= varDeclaration )*
 			loop12:
 			while (true) {
 				int alt12=2;
@@ -701,7 +701,7 @@ public class MiniJavaParser extends Parser {
 
 				switch (alt12) {
 				case 1 :
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:115:11: vd= varDeclaration
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:115:11: vd= varDeclaration
 					{
 					pushFollow(FOLLOW_varDeclaration_in_methodDeclaration692);
 					vd=varDeclaration();
@@ -716,7 +716,7 @@ public class MiniJavaParser extends Parser {
 				}
 			}
 
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:118:9: (sd= statement )*
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:118:9: (sd= statement )*
 			loop13:
 			while (true) {
 				int alt13=2;
@@ -727,7 +727,7 @@ public class MiniJavaParser extends Parser {
 
 				switch (alt13) {
 				case 1 :
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:118:11: sd= statement
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:118:11: sd= statement
 					{
 					pushFollow(FOLLOW_statement_in_methodDeclaration733);
 					sd=statement();
@@ -774,7 +774,7 @@ public class MiniJavaParser extends Parser {
 
 
 	// $ANTLR start "procType"
-	// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:133:1: procType returns [MJType pt] : (t= type | 'void' );
+	// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:133:1: procType returns [MJType pt] : (t= type | 'void' );
 	public final MJType procType() throws RecognitionException {
 		MJType pt = null;
 
@@ -782,7 +782,7 @@ public class MiniJavaParser extends Parser {
 		MJType t =null;
 
 		try {
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:134:3: (t= type | 'void' )
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:134:3: (t= type | 'void' )
 			int alt14=2;
 			int LA14_0 = input.LA(1);
 			if ( (LA14_0==IDENT||LA14_0==33||LA14_0==39) ) {
@@ -800,7 +800,7 @@ public class MiniJavaParser extends Parser {
 
 			switch (alt14) {
 				case 1 :
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:134:5: t= type
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:134:5: t= type
 					{
 					pushFollow(FOLLOW_type_in_procType822);
 					t=type();
@@ -810,7 +810,7 @@ public class MiniJavaParser extends Parser {
 					}
 					break;
 				case 2 :
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:136:5: 'void'
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:136:5: 'void'
 					{
 					match(input,47,FOLLOW_47_in_procType832); 
 					 pt = MJType.getVoidType(); 
@@ -833,7 +833,7 @@ public class MiniJavaParser extends Parser {
 
 
 	// $ANTLR start "statement"
-	// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:140:1: statement returns [MJStatement s] : (c= comment |b= block | 'if' '(' condition= expression ')' thenblock= block ( 'else' elseblock= block )? | 'while' '(' condition= expression ')' whilebody= block |lhs= id '=' rhs= expression ';' |lhs= id '[' idx= expression ']' '=' rhs= expression ';' | 'System.out.println' '(' argument= expression ')' ';' | 'System.out.print' '(' argument= expression ')' ';' |methodname= id '(' (a1= expression ( ',' a2= expression )* )? ')' ';' );
+	// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:140:1: statement returns [MJStatement s] : (c= comment |b= block | 'if' '(' condition= expression ')' thenblock= block ( 'else' elseblock= block )? | 'while' '(' condition= expression ')' whilebody= block |lhs= id '=' rhs= expression ';' |lhs= id '[' idx= expression ']' '=' rhs= expression ';' | 'System.out.println' '(' argument= expression ')' ';' | 'System.out.print' '(' argument= expression ')' ';' |methodname= id '(' (a1= expression ( ',' a2= expression )* )? ')' ';' );
 	public final MJStatement statement() throws RecognitionException {
 		MJStatement s = null;
 
@@ -853,7 +853,7 @@ public class MiniJavaParser extends Parser {
 		MJExpression a2 =null;
 
 		try {
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:141:3: (c= comment |b= block | 'if' '(' condition= expression ')' thenblock= block ( 'else' elseblock= block )? | 'while' '(' condition= expression ')' whilebody= block |lhs= id '=' rhs= expression ';' |lhs= id '[' idx= expression ']' '=' rhs= expression ';' | 'System.out.println' '(' argument= expression ')' ';' | 'System.out.print' '(' argument= expression ')' ';' |methodname= id '(' (a1= expression ( ',' a2= expression )* )? ')' ';' )
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:141:3: (c= comment |b= block | 'if' '(' condition= expression ')' thenblock= block ( 'else' elseblock= block )? | 'while' '(' condition= expression ')' whilebody= block |lhs= id '=' rhs= expression ';' |lhs= id '[' idx= expression ']' '=' rhs= expression ';' | 'System.out.println' '(' argument= expression ')' ';' | 'System.out.print' '(' argument= expression ')' ';' |methodname= id '(' (a1= expression ( ',' a2= expression )* )? ')' ';' )
 			int alt18=9;
 			switch ( input.LA(1) ) {
 			case COMMENT:
@@ -1057,7 +1057,7 @@ public class MiniJavaParser extends Parser {
 			}
 			switch (alt18) {
 				case 1 :
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:141:5: c= comment
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:141:5: c= comment
 					{
 					pushFollow(FOLLOW_comment_in_statement859);
 					c=comment();
@@ -1067,7 +1067,7 @@ public class MiniJavaParser extends Parser {
 					}
 					break;
 				case 2 :
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:143:5: b= block
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:143:5: b= block
 					{
 					pushFollow(FOLLOW_block_in_statement875);
 					b=block();
@@ -1077,7 +1077,7 @@ public class MiniJavaParser extends Parser {
 					}
 					break;
 				case 3 :
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:145:5: 'if' '(' condition= expression ')' thenblock= block ( 'else' elseblock= block )?
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:145:5: 'if' '(' condition= expression ')' thenblock= block ( 'else' elseblock= block )?
 					{
 					match(input,38,FOLLOW_38_in_statement887); 
 					match(input,17,FOLLOW_17_in_statement889); 
@@ -1093,7 +1093,7 @@ public class MiniJavaParser extends Parser {
 
 					      s = new MJIf(condition, thenblock);
 					    
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:149:5: ( 'else' elseblock= block )?
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:149:5: ( 'else' elseblock= block )?
 					int alt15=2;
 					int LA15_0 = input.LA(1);
 					if ( (LA15_0==35) ) {
@@ -1101,7 +1101,7 @@ public class MiniJavaParser extends Parser {
 					}
 					switch (alt15) {
 						case 1 :
-							// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:149:7: 'else' elseblock= block
+							// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:149:7: 'else' elseblock= block
 							{
 							match(input,35,FOLLOW_35_in_statement918); 
 							pushFollow(FOLLOW_block_in_statement924);
@@ -1119,7 +1119,7 @@ public class MiniJavaParser extends Parser {
 					}
 					break;
 				case 4 :
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:154:5: 'while' '(' condition= expression ')' whilebody= block
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:154:5: 'while' '(' condition= expression ')' whilebody= block
 					{
 					match(input,48,FOLLOW_48_in_statement946); 
 					match(input,17,FOLLOW_17_in_statement948); 
@@ -1138,7 +1138,7 @@ public class MiniJavaParser extends Parser {
 					}
 					break;
 				case 5 :
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:158:5: lhs= id '=' rhs= expression ';'
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:158:5: lhs= id '=' rhs= expression ';'
 					{
 					pushFollow(FOLLOW_id_in_statement978);
 					lhs=id();
@@ -1156,7 +1156,7 @@ public class MiniJavaParser extends Parser {
 					}
 					break;
 				case 6 :
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:162:5: lhs= id '[' idx= expression ']' '=' rhs= expression ';'
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:162:5: lhs= id '[' idx= expression ']' '=' rhs= expression ';'
 					{
 					pushFollow(FOLLOW_id_in_statement1002);
 					lhs=id();
@@ -1180,7 +1180,7 @@ public class MiniJavaParser extends Parser {
 					}
 					break;
 				case 7 :
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:166:5: 'System.out.println' '(' argument= expression ')' ';'
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:166:5: 'System.out.println' '(' argument= expression ')' ';'
 					{
 					match(input,30,FOLLOW_30_in_statement1032); 
 					match(input,17,FOLLOW_17_in_statement1034); 
@@ -1196,7 +1196,7 @@ public class MiniJavaParser extends Parser {
 					}
 					break;
 				case 8 :
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:170:5: 'System.out.print' '(' argument= expression ')' ';'
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:170:5: 'System.out.print' '(' argument= expression ')' ';'
 					{
 					match(input,29,FOLLOW_29_in_statement1056); 
 					match(input,17,FOLLOW_17_in_statement1058); 
@@ -1212,7 +1212,7 @@ public class MiniJavaParser extends Parser {
 					}
 					break;
 				case 9 :
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:174:5: methodname= id '(' (a1= expression ( ',' a2= expression )* )? ')' ';'
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:174:5: methodname= id '(' (a1= expression ( ',' a2= expression )* )? ')' ';'
 					{
 					 LinkedList<MJExpression> argumentList = new LinkedList<MJExpression>(); 
 					pushFollow(FOLLOW_id_in_statement1091);
@@ -1220,7 +1220,7 @@ public class MiniJavaParser extends Parser {
 					state._fsp--;
 
 					match(input,17,FOLLOW_17_in_statement1093); 
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:176:5: (a1= expression ( ',' a2= expression )* )?
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:176:5: (a1= expression ( ',' a2= expression )* )?
 					int alt17=2;
 					int LA17_0 = input.LA(1);
 					if ( ((LA17_0 >= IDENT && LA17_0 <= INT)||LA17_0==STRING||LA17_0==15||LA17_0==17||LA17_0==22||LA17_0==37||LA17_0==41||(LA17_0 >= 45 && LA17_0 <= 46)) ) {
@@ -1228,14 +1228,14 @@ public class MiniJavaParser extends Parser {
 					}
 					switch (alt17) {
 						case 1 :
-							// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:176:7: a1= expression ( ',' a2= expression )*
+							// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:176:7: a1= expression ( ',' a2= expression )*
 							{
 							pushFollow(FOLLOW_expression_in_statement1106);
 							a1=expression();
 							state._fsp--;
 
 							 argumentList.add(a1); 
-							// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:178:7: ( ',' a2= expression )*
+							// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:178:7: ( ',' a2= expression )*
 							loop16:
 							while (true) {
 								int alt16=2;
@@ -1246,7 +1246,7 @@ public class MiniJavaParser extends Parser {
 
 								switch (alt16) {
 								case 1 :
-									// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:178:8: ',' a2= expression
+									// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:178:8: ',' a2= expression
 									{
 									match(input,21,FOLLOW_21_in_statement1125); 
 									pushFollow(FOLLOW_expression_in_statement1131);
@@ -1289,7 +1289,7 @@ public class MiniJavaParser extends Parser {
 
 
 	// $ANTLR start "comment"
-	// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:185:1: comment returns [MJComment c] : COMMENT ;
+	// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:185:1: comment returns [MJComment c] : COMMENT ;
 	public final MJComment comment() throws RecognitionException {
 		MJComment c = null;
 
@@ -1297,8 +1297,8 @@ public class MiniJavaParser extends Parser {
 		Token COMMENT2=null;
 
 		try {
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:186:3: ( COMMENT )
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:186:5: COMMENT
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:186:3: ( COMMENT )
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:186:5: COMMENT
 			{
 			COMMENT2=(Token)match(input,COMMENT,FOLLOW_COMMENT_in_comment1191); 
 			 c = new MJComment((COMMENT2!=null?COMMENT2.getText():null)); 
@@ -1319,7 +1319,7 @@ public class MiniJavaParser extends Parser {
 
 
 	// $ANTLR start "expression"
-	// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:190:1: expression returns [MJExpression res] : arg1= level1 ( '&&' arg2= level1 )* ;
+	// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:190:1: expression returns [MJExpression res] : arg1= level1 ( '&&' arg2= level1 )* ;
 	public final MJExpression expression() throws RecognitionException {
 		MJExpression res = null;
 
@@ -1328,15 +1328,15 @@ public class MiniJavaParser extends Parser {
 		MJExpression arg2 =null;
 
 		try {
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:191:3: (arg1= level1 ( '&&' arg2= level1 )* )
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:191:5: arg1= level1 ( '&&' arg2= level1 )*
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:191:3: (arg1= level1 ( '&&' arg2= level1 )* )
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:191:5: arg1= level1 ( '&&' arg2= level1 )*
 			{
 			pushFollow(FOLLOW_level1_in_expression1221);
 			arg1=level1();
 			state._fsp--;
 
 			 res = arg1; 
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:193:5: ( '&&' arg2= level1 )*
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:193:5: ( '&&' arg2= level1 )*
 			loop19:
 			while (true) {
 				int alt19=2;
@@ -1347,7 +1347,7 @@ public class MiniJavaParser extends Parser {
 
 				switch (alt19) {
 				case 1 :
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:193:7: '&&' arg2= level1
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:193:7: '&&' arg2= level1
 					{
 					match(input,16,FOLLOW_16_in_expression1236); 
 					pushFollow(FOLLOW_level1_in_expression1242);
@@ -1382,7 +1382,7 @@ public class MiniJavaParser extends Parser {
 
 
 	// $ANTLR start "level1"
-	// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:200:1: level1 returns [MJExpression res] : arg1= level2 ( '==' arg2= level2 )* ;
+	// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:200:1: level1 returns [MJExpression res] : arg1= level2 ( '==' arg2= level2 )* ;
 	public final MJExpression level1() throws RecognitionException {
 		MJExpression res = null;
 
@@ -1391,15 +1391,15 @@ public class MiniJavaParser extends Parser {
 		MJExpression arg2 =null;
 
 		try {
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:201:3: (arg1= level2 ( '==' arg2= level2 )* )
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:201:5: arg1= level2 ( '==' arg2= level2 )*
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:201:3: (arg1= level2 ( '==' arg2= level2 )* )
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:201:5: arg1= level2 ( '==' arg2= level2 )*
 			{
 			pushFollow(FOLLOW_level2_in_level11279);
 			arg1=level2();
 			state._fsp--;
 
 			  res = arg1; 
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:203:5: ( '==' arg2= level2 )*
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:203:5: ( '==' arg2= level2 )*
 			loop20:
 			while (true) {
 				int alt20=2;
@@ -1410,7 +1410,7 @@ public class MiniJavaParser extends Parser {
 
 				switch (alt20) {
 				case 1 :
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:203:7: '==' arg2= level2
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:203:7: '==' arg2= level2
 					{
 					match(input,27,FOLLOW_27_in_level11293); 
 					pushFollow(FOLLOW_level2_in_level11299);
@@ -1445,7 +1445,7 @@ public class MiniJavaParser extends Parser {
 
 
 	// $ANTLR start "level2"
-	// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:210:1: level2 returns [MJExpression res] : arg1= level3 ( '<' arg2= level3 )* ;
+	// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:210:1: level2 returns [MJExpression res] : arg1= level3 ( '<' arg2= level3 )* ;
 	public final MJExpression level2() throws RecognitionException {
 		MJExpression res = null;
 
@@ -1454,15 +1454,15 @@ public class MiniJavaParser extends Parser {
 		MJExpression arg2 =null;
 
 		try {
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:211:3: (arg1= level3 ( '<' arg2= level3 )* )
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:211:5: arg1= level3 ( '<' arg2= level3 )*
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:211:3: (arg1= level3 ( '<' arg2= level3 )* )
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:211:5: arg1= level3 ( '<' arg2= level3 )*
 			{
 			pushFollow(FOLLOW_level3_in_level21338);
 			arg1=level3();
 			state._fsp--;
 
 			  res = arg1; 
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:213:5: ( '<' arg2= level3 )*
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:213:5: ( '<' arg2= level3 )*
 			loop21:
 			while (true) {
 				int alt21=2;
@@ -1473,7 +1473,7 @@ public class MiniJavaParser extends Parser {
 
 				switch (alt21) {
 				case 1 :
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:213:7: '<' arg2= level3
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:213:7: '<' arg2= level3
 					{
 					match(input,25,FOLLOW_25_in_level21352); 
 					pushFollow(FOLLOW_level3_in_level21358);
@@ -1508,7 +1508,7 @@ public class MiniJavaParser extends Parser {
 
 
 	// $ANTLR start "level3"
-	// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:220:1: level3 returns [MJExpression res] : arg1= level4 ( ( '+' | '-' ) arg2= level4 )* ;
+	// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:220:1: level3 returns [MJExpression res] : arg1= level4 ( ( '+' | '-' ) arg2= level4 )* ;
 	public final MJExpression level3() throws RecognitionException {
 		MJExpression res = null;
 
@@ -1517,15 +1517,15 @@ public class MiniJavaParser extends Parser {
 		MJExpression arg2 =null;
 
 		try {
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:221:3: (arg1= level4 ( ( '+' | '-' ) arg2= level4 )* )
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:221:5: arg1= level4 ( ( '+' | '-' ) arg2= level4 )*
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:221:3: (arg1= level4 ( ( '+' | '-' ) arg2= level4 )* )
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:221:5: arg1= level4 ( ( '+' | '-' ) arg2= level4 )*
 			{
 			pushFollow(FOLLOW_level4_in_level31399);
 			arg1=level4();
 			state._fsp--;
 
 			  res = arg1; 
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:223:5: ( ( '+' | '-' ) arg2= level4 )*
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:223:5: ( ( '+' | '-' ) arg2= level4 )*
 			loop23:
 			while (true) {
 				int alt23=2;
@@ -1536,10 +1536,10 @@ public class MiniJavaParser extends Parser {
 
 				switch (alt23) {
 				case 1 :
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:223:7: ( '+' | '-' ) arg2= level4
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:223:7: ( '+' | '-' ) arg2= level4
 					{
 					 MJBinaryOp op = null;
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:224:7: ( '+' | '-' )
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:224:7: ( '+' | '-' )
 					int alt22=2;
 					int LA22_0 = input.LA(1);
 					if ( (LA22_0==20) ) {
@@ -1557,14 +1557,14 @@ public class MiniJavaParser extends Parser {
 
 					switch (alt22) {
 						case 1 :
-							// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:224:9: '+'
+							// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:224:9: '+'
 							{
 							match(input,20,FOLLOW_20_in_level31423); 
 							 op = new MJPlus(); 
 							}
 							break;
 						case 2 :
-							// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:224:38: '-'
+							// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:224:38: '-'
 							{
 							match(input,22,FOLLOW_22_in_level31429); 
 							 op = new MJMinus(); 
@@ -1606,7 +1606,7 @@ public class MiniJavaParser extends Parser {
 
 
 	// $ANTLR start "level4"
-	// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:233:1: level4 returns [MJExpression res] : arg1= level5 ( '*' arg2= level5 )* ;
+	// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:233:1: level4 returns [MJExpression res] : arg1= level5 ( '*' arg2= level5 )* ;
 	public final MJExpression level4() throws RecognitionException {
 		MJExpression res = null;
 
@@ -1615,15 +1615,15 @@ public class MiniJavaParser extends Parser {
 		MJExpression arg2 =null;
 
 		try {
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:234:3: (arg1= level5 ( '*' arg2= level5 )* )
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:234:6: arg1= level5 ( '*' arg2= level5 )*
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:234:3: (arg1= level5 ( '*' arg2= level5 )* )
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:234:6: arg1= level5 ( '*' arg2= level5 )*
 			{
 			pushFollow(FOLLOW_level5_in_level41484);
 			arg1=level5();
 			state._fsp--;
 
 			  res = arg1; 
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:236:5: ( '*' arg2= level5 )*
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:236:5: ( '*' arg2= level5 )*
 			loop24:
 			while (true) {
 				int alt24=2;
@@ -1634,7 +1634,7 @@ public class MiniJavaParser extends Parser {
 
 				switch (alt24) {
 				case 1 :
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:236:7: '*' arg2= level5
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:236:7: '*' arg2= level5
 					{
 					match(input,19,FOLLOW_19_in_level41498); 
 					pushFollow(FOLLOW_level5_in_level41504);
@@ -1669,7 +1669,7 @@ public class MiniJavaParser extends Parser {
 
 
 	// $ANTLR start "level5"
-	// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:243:1: level5 returns [MJExpression e] : ( '-' l= level5 | '!' l= level5 | 'new' 'int' '[' size= expression ']' | 'new' IDENT '(' (a1= expression ( ',' a2= expression )* )? ')' |i= id |i= id '[' idx= expression ']' |m= id '(' (a1= expression ( ',' a2= expression )* )? ')' | '(' argument= expression ')' | 'true' | 'false' | INT | STRING );
+	// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:243:1: level5 returns [MJExpression e] : ( '-' l= level5 | '!' l= level5 | 'new' 'int' '[' size= expression ']' | 'new' IDENT '(' (a1= expression ( ',' a2= expression )* )? ')' |i= id |i= id '[' idx= expression ']' |m= id '(' (a1= expression ( ',' a2= expression )* )? ')' | '(' argument= expression ')' | 'true' | 'false' | INT | STRING );
 	public final MJExpression level5() throws RecognitionException {
 		MJExpression e = null;
 
@@ -1687,7 +1687,7 @@ public class MiniJavaParser extends Parser {
 		MJExpression argument =null;
 
 		try {
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:244:3: ( '-' l= level5 | '!' l= level5 | 'new' 'int' '[' size= expression ']' | 'new' IDENT '(' (a1= expression ( ',' a2= expression )* )? ')' |i= id |i= id '[' idx= expression ']' |m= id '(' (a1= expression ( ',' a2= expression )* )? ')' | '(' argument= expression ')' | 'true' | 'false' | INT | STRING )
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:244:3: ( '-' l= level5 | '!' l= level5 | 'new' 'int' '[' size= expression ']' | 'new' IDENT '(' (a1= expression ( ',' a2= expression )* )? ')' |i= id |i= id '[' idx= expression ']' |m= id '(' (a1= expression ( ',' a2= expression )* )? ')' | '(' argument= expression ')' | 'true' | 'false' | INT | STRING )
 			int alt29=12;
 			switch ( input.LA(1) ) {
 			case 22:
@@ -1956,7 +1956,7 @@ public class MiniJavaParser extends Parser {
 			}
 			switch (alt29) {
 				case 1 :
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:244:5: '-' l= level5
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:244:5: '-' l= level5
 					{
 					match(input,22,FOLLOW_22_in_level51539); 
 					pushFollow(FOLLOW_level5_in_level51545);
@@ -1967,7 +1967,7 @@ public class MiniJavaParser extends Parser {
 					}
 					break;
 				case 2 :
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:246:5: '!' l= level5
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:246:5: '!' l= level5
 					{
 					match(input,15,FOLLOW_15_in_level51557); 
 					pushFollow(FOLLOW_level5_in_level51563);
@@ -1978,7 +1978,7 @@ public class MiniJavaParser extends Parser {
 					}
 					break;
 				case 3 :
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:248:5: 'new' 'int' '[' size= expression ']'
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:248:5: 'new' 'int' '[' size= expression ']'
 					{
 					match(input,41,FOLLOW_41_in_level51576); 
 					match(input,39,FOLLOW_39_in_level51578); 
@@ -1992,13 +1992,13 @@ public class MiniJavaParser extends Parser {
 					}
 					break;
 				case 4 :
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:250:5: 'new' IDENT '(' (a1= expression ( ',' a2= expression )* )? ')'
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:250:5: 'new' IDENT '(' (a1= expression ( ',' a2= expression )* )? ')'
 					{
 					 LinkedList<MJExpression> arglist = new LinkedList<MJExpression>(); 
 					match(input,41,FOLLOW_41_in_level51606); 
 					IDENT3=(Token)match(input,IDENT,FOLLOW_IDENT_in_level51608); 
 					match(input,17,FOLLOW_17_in_level51610); 
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:252:5: (a1= expression ( ',' a2= expression )* )?
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:252:5: (a1= expression ( ',' a2= expression )* )?
 					int alt26=2;
 					int LA26_0 = input.LA(1);
 					if ( ((LA26_0 >= IDENT && LA26_0 <= INT)||LA26_0==STRING||LA26_0==15||LA26_0==17||LA26_0==22||LA26_0==37||LA26_0==41||(LA26_0 >= 45 && LA26_0 <= 46)) ) {
@@ -2006,14 +2006,14 @@ public class MiniJavaParser extends Parser {
 					}
 					switch (alt26) {
 						case 1 :
-							// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:252:7: a1= expression ( ',' a2= expression )*
+							// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:252:7: a1= expression ( ',' a2= expression )*
 							{
 							pushFollow(FOLLOW_expression_in_level51622);
 							a1=expression();
 							state._fsp--;
 
 							 arglist.add(a1); 
-							// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:254:7: ( ',' a2= expression )*
+							// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:254:7: ( ',' a2= expression )*
 							loop25:
 							while (true) {
 								int alt25=2;
@@ -2024,7 +2024,7 @@ public class MiniJavaParser extends Parser {
 
 								switch (alt25) {
 								case 1 :
-									// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:254:8: ',' a2= expression
+									// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:254:8: ',' a2= expression
 									{
 									match(input,21,FOLLOW_21_in_level51641); 
 									pushFollow(FOLLOW_expression_in_level51647);
@@ -2050,7 +2050,7 @@ public class MiniJavaParser extends Parser {
 					}
 					break;
 				case 5 :
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:260:5: i= id
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:260:5: i= id
 					{
 					pushFollow(FOLLOW_id_in_level51698);
 					i=id();
@@ -2060,7 +2060,7 @@ public class MiniJavaParser extends Parser {
 					}
 					break;
 				case 6 :
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:262:5: i= id '[' idx= expression ']'
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:262:5: i= id '[' idx= expression ']'
 					{
 					pushFollow(FOLLOW_id_in_level51714);
 					i=id();
@@ -2076,7 +2076,7 @@ public class MiniJavaParser extends Parser {
 					}
 					break;
 				case 7 :
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:264:5: m= id '(' (a1= expression ( ',' a2= expression )* )? ')'
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:264:5: m= id '(' (a1= expression ( ',' a2= expression )* )? ')'
 					{
 					 LinkedList<MJExpression> arglist = new LinkedList<MJExpression>(); 
 					pushFollow(FOLLOW_id_in_level51747);
@@ -2084,7 +2084,7 @@ public class MiniJavaParser extends Parser {
 					state._fsp--;
 
 					match(input,17,FOLLOW_17_in_level51749); 
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:266:5: (a1= expression ( ',' a2= expression )* )?
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:266:5: (a1= expression ( ',' a2= expression )* )?
 					int alt28=2;
 					int LA28_0 = input.LA(1);
 					if ( ((LA28_0 >= IDENT && LA28_0 <= INT)||LA28_0==STRING||LA28_0==15||LA28_0==17||LA28_0==22||LA28_0==37||LA28_0==41||(LA28_0 >= 45 && LA28_0 <= 46)) ) {
@@ -2092,14 +2092,14 @@ public class MiniJavaParser extends Parser {
 					}
 					switch (alt28) {
 						case 1 :
-							// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:266:7: a1= expression ( ',' a2= expression )*
+							// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:266:7: a1= expression ( ',' a2= expression )*
 							{
 							pushFollow(FOLLOW_expression_in_level51762);
 							a1=expression();
 							state._fsp--;
 
 							 arglist.add(a1); 
-							// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:268:7: ( ',' a2= expression )*
+							// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:268:7: ( ',' a2= expression )*
 							loop27:
 							while (true) {
 								int alt27=2;
@@ -2110,7 +2110,7 @@ public class MiniJavaParser extends Parser {
 
 								switch (alt27) {
 								case 1 :
-									// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:268:8: ',' a2= expression
+									// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:268:8: ',' a2= expression
 									{
 									match(input,21,FOLLOW_21_in_level51781); 
 									pushFollow(FOLLOW_expression_in_level51787);
@@ -2136,7 +2136,7 @@ public class MiniJavaParser extends Parser {
 					}
 					break;
 				case 8 :
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:273:5: '(' argument= expression ')'
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:273:5: '(' argument= expression ')'
 					{
 					match(input,17,FOLLOW_17_in_level51833); 
 					pushFollow(FOLLOW_expression_in_level51839);
@@ -2148,28 +2148,28 @@ public class MiniJavaParser extends Parser {
 					}
 					break;
 				case 9 :
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:275:5: 'true'
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:275:5: 'true'
 					{
 					match(input,46,FOLLOW_46_in_level51853); 
 					 e = MJBoolean.True; 
 					}
 					break;
 				case 10 :
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:277:5: 'false'
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:277:5: 'false'
 					{
 					match(input,37,FOLLOW_37_in_level51866); 
 					 e = MJBoolean.False; 
 					}
 					break;
 				case 11 :
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:279:5: INT
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:279:5: INT
 					{
 					INT4=(Token)match(input,INT,FOLLOW_INT_in_level51879); 
 					 e = new MJInteger((INT4!=null?INT4.getText():null)); 
 					}
 					break;
 				case 12 :
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:281:5: STRING
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:281:5: STRING
 					{
 					STRING5=(Token)match(input,STRING,FOLLOW_STRING_in_level51892); 
 					 e = new MJString((STRING5!=null?STRING5.getText():null)); 
@@ -2192,7 +2192,7 @@ public class MiniJavaParser extends Parser {
 
 
 	// $ANTLR start "id"
-	// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:285:3: id returns [MJIdentifier e] : ( IDENT | 'this' |t= thisid '.' IDENT );
+	// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:285:3: id returns [MJIdentifier e] : ( IDENT | 'this' |t= thisid '.' IDENT );
 	public final MJIdentifier id() throws RecognitionException {
 		MJIdentifier e = null;
 
@@ -2202,7 +2202,7 @@ public class MiniJavaParser extends Parser {
 		MJIdentifier t =null;
 
 		try {
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:286:3: ( IDENT | 'this' |t= thisid '.' IDENT )
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:286:3: ( IDENT | 'this' |t= thisid '.' IDENT )
 			int alt30=3;
 			int LA30_0 = input.LA(1);
 			if ( (LA30_0==IDENT) ) {
@@ -2258,21 +2258,21 @@ public class MiniJavaParser extends Parser {
 
 			switch (alt30) {
 				case 1 :
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:286:5: IDENT
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:286:5: IDENT
 					{
 					IDENT6=(Token)match(input,IDENT,FOLLOW_IDENT_in_id1920); 
 					 e = new MJIdentifier((IDENT6!=null?IDENT6.getText():null));
 					}
 					break;
 				case 2 :
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:288:5: 'this'
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:288:5: 'this'
 					{
 					match(input,45,FOLLOW_45_in_id1932); 
 					 e= new MJIdentifier("this"); 
 					}
 					break;
 				case 3 :
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:290:5: t= thisid '.' IDENT
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:290:5: t= thisid '.' IDENT
 					{
 					pushFollow(FOLLOW_thisid_in_id1948);
 					t=thisid();
@@ -2303,7 +2303,7 @@ public class MiniJavaParser extends Parser {
 
 
 	// $ANTLR start "thisid"
-	// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:297:1: thisid returns [MJIdentifier e] : ( 'this' | IDENT );
+	// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:297:1: thisid returns [MJIdentifier e] : ( 'this' | IDENT );
 	public final MJIdentifier thisid() throws RecognitionException {
 		MJIdentifier e = null;
 
@@ -2311,7 +2311,7 @@ public class MiniJavaParser extends Parser {
 		Token IDENT8=null;
 
 		try {
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:298:3: ( 'this' | IDENT )
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:298:3: ( 'this' | IDENT )
 			int alt31=2;
 			int LA31_0 = input.LA(1);
 			if ( (LA31_0==45) ) {
@@ -2329,14 +2329,14 @@ public class MiniJavaParser extends Parser {
 
 			switch (alt31) {
 				case 1 :
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:298:5: 'this'
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:298:5: 'this'
 					{
 					match(input,45,FOLLOW_45_in_thisid1975); 
 					 e= new MJIdentifier("this"); 
 					}
 					break;
 				case 2 :
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:300:5: IDENT
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:300:5: IDENT
 					{
 					IDENT8=(Token)match(input,IDENT,FOLLOW_IDENT_in_thisid1988); 
 					 e = new MJIdentifier((IDENT8!=null?IDENT8.getText():null));
@@ -2359,7 +2359,7 @@ public class MiniJavaParser extends Parser {
 
 
 	// $ANTLR start "optExpression"
-	// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:304:1: optExpression returns [MJExpression e] : (ex= expression |);
+	// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:304:1: optExpression returns [MJExpression e] : (ex= expression |);
 	public final MJExpression optExpression() throws RecognitionException {
 		MJExpression e = null;
 
@@ -2367,7 +2367,7 @@ public class MiniJavaParser extends Parser {
 		MJExpression ex =null;
 
 		try {
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:305:3: (ex= expression |)
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:305:3: (ex= expression |)
 			int alt32=2;
 			int LA32_0 = input.LA(1);
 			if ( ((LA32_0 >= IDENT && LA32_0 <= INT)||LA32_0==STRING||LA32_0==15||LA32_0==17||LA32_0==22||LA32_0==37||LA32_0==41||(LA32_0 >= 45 && LA32_0 <= 46)) ) {
@@ -2385,7 +2385,7 @@ public class MiniJavaParser extends Parser {
 
 			switch (alt32) {
 				case 1 :
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:305:5: ex= expression
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:305:5: ex= expression
 					{
 					pushFollow(FOLLOW_expression_in_optExpression2017);
 					ex=expression();
@@ -2395,7 +2395,7 @@ public class MiniJavaParser extends Parser {
 					}
 					break;
 				case 2 :
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:308:5: 
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:308:5: 
 					{
 					 e = new MJNoExpression(); 
 					}

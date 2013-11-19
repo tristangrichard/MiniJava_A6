@@ -3,6 +3,9 @@ package compiler.IR;
 import java.util.HashSet;
 
 import compiler.PrettyPrinter;
+import compiler.CODE.CODE;
+import compiler.CODE.LC3.*;
+import compiler.Exceptions.CodeGenException;
 import compiler.Exceptions.TypeCheckerException;
 
 public class MJNegate extends MJUnaryOp {
@@ -17,24 +20,31 @@ public class MJNegate extends MJUnaryOp {
 	}
 
 	MJType typeCheck() throws TypeCheckerException {
-		// Save the type
+		
+		// type check the argument
+		
 		this.type = this.arg.typeCheck();
-		// checks if arg is boolean or int, throws exception if not either.
-		if (this.type.isInt() || this.type.isBoolean())
-		{
-			return MJType.getVoidType();
+		
+		// which must have type boolean
+		
+		if (!this.type.isBoolean()) {
+			new TypeCheckerException("Argument of ! must have type boolean");
 		}
-		else{
-			throw new TypeCheckerException("arg to negate should be int or boolean");
-		}
+		
+		return this.type;
 	}
 
 	void variableInit(HashSet<MJVariable> initialized)
 			throws TypeCheckerException {
 		
-		//throws typechecker expeption if not initialized
+		// just check the argument
+		
 		this.arg.variableInit(initialized);
+	}
 
+	public void generateCode(CODE code) throws CodeGenException {
+		code.comment(" NEGATE BEGIN ");
+		code.comment(" NEGATE END ");
 	}
 
 }

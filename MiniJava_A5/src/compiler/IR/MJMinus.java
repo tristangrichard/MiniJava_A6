@@ -3,6 +3,9 @@ package compiler.IR;
 import java.util.HashSet;
 
 import compiler.PrettyPrinter;
+import compiler.CODE.CODE;
+import compiler.CODE.LC3.*;
+import compiler.Exceptions.CodeGenException;
 import compiler.Exceptions.TypeCheckerException;
 
 public class MJMinus extends MJBinaryOp {
@@ -44,6 +47,11 @@ public class MJMinus extends MJBinaryOp {
 		
 		this.lhs.variableInit(initialized);
 		this.rhs.variableInit(initialized);
+	}
+
+	public void generateCode(CODE code) throws CodeGenException {
+		code.comment(" MINUS BEGIN ");
+		code.comment(" MINUS END ");
 	}
 
 }

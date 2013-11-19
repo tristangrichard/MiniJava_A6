@@ -4,13 +4,16 @@ import java.util.HashSet;
 import java.util.LinkedList;
 
 import compiler.PrettyPrinter;
+import compiler.CODE.CODE;
+import compiler.CODE.LC3.LC3comment;
+import compiler.Exceptions.CodeGenException;
 import compiler.Exceptions.TypeCheckerException;
 import compiler.Exceptions.VariableAlreadyDeclared;
 
 public class MJBlock extends MJStatement {
 
-	private LinkedList<MJVariable> variables;
-	private LinkedList<MJStatement> statements;
+	private LinkedList<MJVariable> variables = new LinkedList<MJVariable>();
+	private LinkedList<MJStatement> statements = new LinkedList<MJStatement>();
 
 	public MJBlock(LinkedList<MJVariable> vdl, LinkedList<MJStatement> sdl) {
 		this.variables = vdl;
@@ -43,6 +46,17 @@ public class MJBlock extends MJStatement {
 
 		prepri.out();
 		prepri.println("}");
+	}
+
+	public void rewriteTwo() {
+
+		for (MJVariable v : this.variables) {
+			v.rewriteTwo();
+		}
+		
+		for (MJStatement s : this.statements) {
+			s.rewriteTwo();
+		}
 	}
 
 	MJType typeCheck() throws TypeCheckerException {
@@ -84,6 +98,23 @@ public class MJBlock extends MJStatement {
 			s.variableInit(initialized);
 		}
 
+	}
+
+	public int requiredStackSize() { 
+		
+		int maxsize = 0;
+		
+		for (MJStatement s : this.statements) {
+			maxsize = Math.max(maxsize, s.requiredStackSize());
+		}
+		return maxsize;
+	}
+
+	public void generateCode(CODE code) throws CodeGenException {
+		
+		for (MJStatement s : this.statements) {
+			s.generateCode(code);
+		}
 	}
 
 }

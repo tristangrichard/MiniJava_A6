@@ -13,7 +13,7 @@ public abstract class MJBinaryOp extends MJExpression {
 		this.rhs = op;
 	}
 
-	protected MJBinaryOp() {
+	public MJBinaryOp() {
 	};
 
 	public MJBinaryOp(MJExpression a, MJExpression b) {
@@ -21,4 +21,14 @@ public abstract class MJBinaryOp extends MJExpression {
 		this.rhs = b;
 	}
 
+	public int requiredStackSize() { 
+		return Math.max(this.lhs.requiredStackSize(), this.lhs.requiredStackSize()) + 1;
+	}
+	
+	public MJExpression rewriteTwo() {
+		this.lhs = lhs.rewriteTwo();
+		this.rhs = rhs.rewriteTwo();
+		return this;
+	}
+	
 }

@@ -14,9 +14,9 @@ public class MJClass extends IR {
 	private MJType superClass;
 	private LinkedList<MJMethod> methodList = new LinkedList<MJMethod>();
 	private LinkedList<MJVariable> fieldList = new LinkedList<MJVariable>();
-	
-	private boolean isTypeChecked = false;
-	
+	private int size;
+	private int fieldOffsets = -1;
+
 	// this we have just for the main class
 
 	public MJClass(String name, MJMethod md) {
@@ -57,6 +57,22 @@ public class MJClass extends IR {
 		return superClass;
 	}
 
+	public void setSize(int size) {
+		this.size = size;		
+	}
+
+	public int getSize() {
+		return this.size;		
+	}
+	
+	public int getFieldOffsets() {
+		return this.fieldOffsets;
+	}
+	
+	public void setFieldOffsets(int i) {
+		this.fieldOffsets = i;
+	}
+	
 	public void prettyPrint(PrettyPrinter prepri) {
 		prepri.println("class " + this.getName() + " extends "
 				+ this.getSuperClass() + " {");
@@ -79,12 +95,6 @@ public class MJClass extends IR {
 
 	public MJType typeCheck() throws TypeCheckerException {
 
-		if (this.isTypeChecked) {
-			return MJType.getVoidType();
-		}
-		
-		this.isTypeChecked = true;
-		
 		// remember the current class
 		IR.currentClass = this;
 
@@ -101,6 +111,7 @@ public class MJClass extends IR {
 		// and check methods
 
 		for (MJMethod m : this.getMethodList()) {
+
 			m.typeCheck();
 		}
 

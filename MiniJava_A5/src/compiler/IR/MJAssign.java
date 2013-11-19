@@ -3,8 +3,11 @@ package compiler.IR;
 import java.util.HashSet;
 
 import compiler.PrettyPrinter;
+import compiler.CODE.CODE;
+import compiler.CODE.LC3.*;
 import compiler.Exceptions.ClassErrorField;
 import compiler.Exceptions.ClassNotFound;
+import compiler.Exceptions.CodeGenException;
 import compiler.Exceptions.TypeCheckerException;
 import compiler.Exceptions.VariableNotFound;
 
@@ -57,6 +60,28 @@ public class MJAssign extends MJStatement {
 		// why do we need to first check rhs then lhs?
 		
 		this.lhs.variableInit(initialized, true);
+	}
+
+	public int requiredStackSize() { 
+		return this.lhs.requiredStackSize() + this.rhs.requiredStackSize();
+	}
+	
+	public void generateCode(CODE code) throws CodeGenException {
+		
+		code.comment(" ASSIGN ");
+		code.commentline(" rhs ");
+		this.rhs.generateCode(code);
+		code.commentline( " lhs ");
+		this.lhs.generateCode(code, true);
+		code.commentline( " store ");
+		code.pop2(CODE.TMP0, CODE.TMP1);
+		code.add( new LC3STR(CODE.TMP0, CODE.TMP1, 0));
+		code.comment(" ASSIGN END");
+	}
+
+	public void rewriteTwo() {
+		this.lhs = this.lhs.rewriteTwo();
+		this.rhs = this.rhs.rewriteTwo();
 	}
 
 }

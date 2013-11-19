@@ -3,6 +3,9 @@ package compiler.IR;
 import java.util.HashSet;
 
 import compiler.PrettyPrinter;
+import compiler.CODE.CODE;
+import compiler.CODE.LC3.*;
+import compiler.Exceptions.CodeGenException;
 import compiler.Exceptions.TypeCheckerException;
 
 public class MJPlus extends MJBinaryOp {
@@ -44,6 +47,34 @@ public class MJPlus extends MJBinaryOp {
 		
 		this.lhs.variableInit(initialized);
 		this.rhs.variableInit(initialized);
+	}
+
+	public void generateCode(CODE code) throws CodeGenException {
+		
+		code.comment(" PLUS BEGIN");
+		code.commentline(" lhs ");
+		this.lhs.generateCode(code);
+		code.commentline(" rhs ");
+		this.rhs.generateCode(code);
+		
+		if (this.getType().isInt()) {
+			code.commentline(" add integers ");
+			code.pop2( CODE.TMP0, CODE.TMP1);
+			code.add( new LC3ADD(CODE.TMP0, CODE.TMP0, CODE.TMP1));
+			code.push( CODE.TMP0 );
+		} else {
+			// we need a string object that can hold the sum of the two strings
+			
+			LC3label cont = code.newLabel();
+			
+			code.commentline(" add strings ");
+			code.add(new LC3LD( CODE.TMP0, 1));
+			code.add( new LC3BR(cont));
+			code.add( new LC3labeldata(code.addstrings));
+			code.add(cont);
+			code.add( new LC3JSRR(CODE.TMP0));
+		}
+		code.comment(" PLUS END");
 	}
 
 }

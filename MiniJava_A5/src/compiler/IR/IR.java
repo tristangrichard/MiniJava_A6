@@ -19,7 +19,7 @@ public class IR {
 	public static MJMethod currentMethod = null;
 	public static MJClass currentClass = null;
 	
-	protected IR() {
+	public IR() {
 	}
 
 	public IR(MJProgram program) {

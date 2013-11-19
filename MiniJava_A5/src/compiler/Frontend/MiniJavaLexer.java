@@ -1,4 +1,4 @@
-// $ANTLR 3.5 /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g 2013-10-22 10:08:42
+// $ANTLR 3.5 /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g 2013-11-19 00:37:38
 
   package compiler.Frontend;
 
@@ -72,15 +72,15 @@ public class MiniJavaLexer extends Lexer {
 	public MiniJavaLexer(CharStream input, RecognizerSharedState state) {
 		super(input,state);
 	}
-	@Override public String getGrammarFileName() { return "/Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g"; }
+	@Override public String getGrammarFileName() { return "/Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g"; }
 
 	// $ANTLR start "T__15"
 	public final void mT__15() throws RecognitionException {
 		try {
 			int _type = T__15;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:6:7: ( '!' )
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:6:9: '!'
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:6:7: ( '!' )
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:6:9: '!'
 			{
 			match('!'); 
 			}
@@ -99,8 +99,8 @@ public class MiniJavaLexer extends Lexer {
 		try {
 			int _type = T__16;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:7:7: ( '&&' )
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:7:9: '&&'
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:7:7: ( '&&' )
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:7:9: '&&'
 			{
 			match("&&"); 
 
@@ -120,8 +120,8 @@ public class MiniJavaLexer extends Lexer {
 		try {
 			int _type = T__17;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:8:7: ( '(' )
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:8:9: '('
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:8:7: ( '(' )
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:8:9: '('
 			{
 			match('('); 
 			}
@@ -140,8 +140,8 @@ public class MiniJavaLexer extends Lexer {
 		try {
 			int _type = T__18;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:9:7: ( ')' )
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:9:9: ')'
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:9:7: ( ')' )
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:9:9: ')'
 			{
 			match(')'); 
 			}
@@ -160,8 +160,8 @@ public class MiniJavaLexer extends Lexer {
 		try {
 			int _type = T__19;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:10:7: ( '*' )
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:10:9: '*'
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:10:7: ( '*' )
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:10:9: '*'
 			{
 			match('*'); 
 			}
@@ -180,8 +180,8 @@ public class MiniJavaLexer extends Lexer {
 		try {
 			int _type = T__20;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:11:7: ( '+' )
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:11:9: '+'
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:11:7: ( '+' )
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:11:9: '+'
 			{
 			match('+'); 
 			}
@@ -200,8 +200,8 @@ public class MiniJavaLexer extends Lexer {
 		try {
 			int _type = T__21;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:12:7: ( ',' )
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:12:9: ','
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:12:7: ( ',' )
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:12:9: ','
 			{
 			match(','); 
 			}
@@ -220,8 +220,8 @@ public class MiniJavaLexer extends Lexer {
 		try {
 			int _type = T__22;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:13:7: ( '-' )
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:13:9: '-'
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:13:7: ( '-' )
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:13:9: '-'
 			{
 			match('-'); 
 			}
@@ -240,8 +240,8 @@ public class MiniJavaLexer extends Lexer {
 		try {
 			int _type = T__23;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:14:7: ( '.' )
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:14:9: '.'
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:14:7: ( '.' )
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:14:9: '.'
 			{
 			match('.'); 
 			}
@@ -260,8 +260,8 @@ public class MiniJavaLexer extends Lexer {
 		try {
 			int _type = T__24;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:15:7: ( ';' )
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:15:9: ';'
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:15:7: ( ';' )
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:15:9: ';'
 			{
 			match(';'); 
 			}
@@ -280,8 +280,8 @@ public class MiniJavaLexer extends Lexer {
 		try {
 			int _type = T__25;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:16:7: ( '<' )
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:16:9: '<'
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:16:7: ( '<' )
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:16:9: '<'
 			{
 			match('<'); 
 			}
@@ -300,8 +300,8 @@ public class MiniJavaLexer extends Lexer {
 		try {
 			int _type = T__26;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:17:7: ( '=' )
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:17:9: '='
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:17:7: ( '=' )
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:17:9: '='
 			{
 			match('='); 
 			}
@@ -320,8 +320,8 @@ public class MiniJavaLexer extends Lexer {
 		try {
 			int _type = T__27;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:18:7: ( '==' )
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:18:9: '=='
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:18:7: ( '==' )
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:18:9: '=='
 			{
 			match("=="); 
 
@@ -341,8 +341,8 @@ public class MiniJavaLexer extends Lexer {
 		try {
 			int _type = T__28;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:19:7: ( 'String[]' )
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:19:9: 'String[]'
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:19:7: ( 'String[]' )
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:19:9: 'String[]'
 			{
 			match("String[]"); 
 
@@ -362,8 +362,8 @@ public class MiniJavaLexer extends Lexer {
 		try {
 			int _type = T__29;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:20:7: ( 'System.out.print' )
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:20:9: 'System.out.print'
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:20:7: ( 'System.out.print' )
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:20:9: 'System.out.print'
 			{
 			match("System.out.print"); 
 
@@ -383,8 +383,8 @@ public class MiniJavaLexer extends Lexer {
 		try {
 			int _type = T__30;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:21:7: ( 'System.out.println' )
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:21:9: 'System.out.println'
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:21:7: ( 'System.out.println' )
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:21:9: 'System.out.println'
 			{
 			match("System.out.println"); 
 
@@ -404,8 +404,8 @@ public class MiniJavaLexer extends Lexer {
 		try {
 			int _type = T__31;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:22:7: ( '[' )
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:22:9: '['
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:22:7: ( '[' )
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:22:9: '['
 			{
 			match('['); 
 			}
@@ -424,8 +424,8 @@ public class MiniJavaLexer extends Lexer {
 		try {
 			int _type = T__32;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:23:7: ( ']' )
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:23:9: ']'
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:23:7: ( ']' )
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:23:9: ']'
 			{
 			match(']'); 
 			}
@@ -444,8 +444,8 @@ public class MiniJavaLexer extends Lexer {
 		try {
 			int _type = T__33;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:24:7: ( 'boolean' )
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:24:9: 'boolean'
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:24:7: ( 'boolean' )
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:24:9: 'boolean'
 			{
 			match("boolean"); 
 
@@ -465,8 +465,8 @@ public class MiniJavaLexer extends Lexer {
 		try {
 			int _type = T__34;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:25:7: ( 'class' )
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:25:9: 'class'
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:25:7: ( 'class' )
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:25:9: 'class'
 			{
 			match("class"); 
 
@@ -486,8 +486,8 @@ public class MiniJavaLexer extends Lexer {
 		try {
 			int _type = T__35;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:26:7: ( 'else' )
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:26:9: 'else'
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:26:7: ( 'else' )
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:26:9: 'else'
 			{
 			match("else"); 
 
@@ -507,8 +507,8 @@ public class MiniJavaLexer extends Lexer {
 		try {
 			int _type = T__36;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:27:7: ( 'extends' )
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:27:9: 'extends'
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:27:7: ( 'extends' )
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:27:9: 'extends'
 			{
 			match("extends"); 
 
@@ -528,8 +528,8 @@ public class MiniJavaLexer extends Lexer {
 		try {
 			int _type = T__37;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:28:7: ( 'false' )
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:28:9: 'false'
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:28:7: ( 'false' )
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:28:9: 'false'
 			{
 			match("false"); 
 
@@ -549,8 +549,8 @@ public class MiniJavaLexer extends Lexer {
 		try {
 			int _type = T__38;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:29:7: ( 'if' )
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:29:9: 'if'
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:29:7: ( 'if' )
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:29:9: 'if'
 			{
 			match("if"); 
 
@@ -570,8 +570,8 @@ public class MiniJavaLexer extends Lexer {
 		try {
 			int _type = T__39;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:30:7: ( 'int' )
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:30:9: 'int'
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:30:7: ( 'int' )
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:30:9: 'int'
 			{
 			match("int"); 
 
@@ -591,8 +591,8 @@ public class MiniJavaLexer extends Lexer {
 		try {
 			int _type = T__40;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:31:7: ( 'main' )
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:31:9: 'main'
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:31:7: ( 'main' )
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:31:9: 'main'
 			{
 			match("main"); 
 
@@ -612,8 +612,8 @@ public class MiniJavaLexer extends Lexer {
 		try {
 			int _type = T__41;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:32:7: ( 'new' )
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:32:9: 'new'
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:32:7: ( 'new' )
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:32:9: 'new'
 			{
 			match("new"); 
 
@@ -633,8 +633,8 @@ public class MiniJavaLexer extends Lexer {
 		try {
 			int _type = T__42;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:33:7: ( 'public' )
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:33:9: 'public'
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:33:7: ( 'public' )
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:33:9: 'public'
 			{
 			match("public"); 
 
@@ -654,8 +654,8 @@ public class MiniJavaLexer extends Lexer {
 		try {
 			int _type = T__43;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:34:7: ( 'return' )
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:34:9: 'return'
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:34:7: ( 'return' )
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:34:9: 'return'
 			{
 			match("return"); 
 
@@ -675,8 +675,8 @@ public class MiniJavaLexer extends Lexer {
 		try {
 			int _type = T__44;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:35:7: ( 'static' )
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:35:9: 'static'
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:35:7: ( 'static' )
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:35:9: 'static'
 			{
 			match("static"); 
 
@@ -696,8 +696,8 @@ public class MiniJavaLexer extends Lexer {
 		try {
 			int _type = T__45;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:36:7: ( 'this' )
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:36:9: 'this'
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:36:7: ( 'this' )
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:36:9: 'this'
 			{
 			match("this"); 
 
@@ -717,8 +717,8 @@ public class MiniJavaLexer extends Lexer {
 		try {
 			int _type = T__46;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:37:7: ( 'true' )
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:37:9: 'true'
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:37:7: ( 'true' )
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:37:9: 'true'
 			{
 			match("true"); 
 
@@ -738,8 +738,8 @@ public class MiniJavaLexer extends Lexer {
 		try {
 			int _type = T__47;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:38:7: ( 'void' )
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:38:9: 'void'
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:38:7: ( 'void' )
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:38:9: 'void'
 			{
 			match("void"); 
 
@@ -759,8 +759,8 @@ public class MiniJavaLexer extends Lexer {
 		try {
 			int _type = T__48;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:39:7: ( 'while' )
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:39:9: 'while'
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:39:7: ( 'while' )
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:39:9: 'while'
 			{
 			match("while"); 
 
@@ -780,8 +780,8 @@ public class MiniJavaLexer extends Lexer {
 		try {
 			int _type = T__49;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:40:7: ( '{' )
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:40:9: '{'
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:40:7: ( '{' )
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:40:9: '{'
 			{
 			match('{'); 
 			}
@@ -800,8 +800,8 @@ public class MiniJavaLexer extends Lexer {
 		try {
 			int _type = T__50;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:41:7: ( '}' )
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:41:9: '}'
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:41:7: ( '}' )
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:41:9: '}'
 			{
 			match('}'); 
 			}
@@ -818,8 +818,8 @@ public class MiniJavaLexer extends Lexer {
 	// $ANTLR start "LOWER"
 	public final void mLOWER() throws RecognitionException {
 		try {
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:311:16: ( ( 'a' .. 'z' ) )
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:311:16: ( ( 'a' .. 'z' ) )
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:
 			{
 			if ( (input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
 				input.consume();
@@ -841,8 +841,8 @@ public class MiniJavaLexer extends Lexer {
 	// $ANTLR start "UPPER"
 	public final void mUPPER() throws RecognitionException {
 		try {
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:312:16: ( ( 'A' .. 'Z' ) )
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:312:16: ( ( 'A' .. 'Z' ) )
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:
 			{
 			if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z') ) {
 				input.consume();
@@ -864,8 +864,8 @@ public class MiniJavaLexer extends Lexer {
 	// $ANTLR start "NONNULL"
 	public final void mNONNULL() throws RecognitionException {
 		try {
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:313:18: ( ( '1' .. '9' ) )
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:313:18: ( ( '1' .. '9' ) )
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:
 			{
 			if ( (input.LA(1) >= '1' && input.LA(1) <= '9') ) {
 				input.consume();
@@ -887,8 +887,8 @@ public class MiniJavaLexer extends Lexer {
 	// $ANTLR start "NUMBER"
 	public final void mNUMBER() throws RecognitionException {
 		try {
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:314:17: ( ( '0' | NONNULL ) )
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:314:17: ( ( '0' | NONNULL ) )
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:
 			{
 			if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
 				input.consume();
@@ -912,8 +912,8 @@ public class MiniJavaLexer extends Lexer {
 		try {
 			int _type = IDENT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:315:7: ( ( LOWER | UPPER ) ( LOWER | UPPER | NUMBER | '_' )* )
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:315:9: ( LOWER | UPPER ) ( LOWER | UPPER | NUMBER | '_' )*
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:315:7: ( ( LOWER | UPPER ) ( LOWER | UPPER | NUMBER | '_' )* )
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:315:9: ( LOWER | UPPER ) ( LOWER | UPPER | NUMBER | '_' )*
 			{
 			if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
 				input.consume();
@@ -923,7 +923,7 @@ public class MiniJavaLexer extends Lexer {
 				recover(mse);
 				throw mse;
 			}
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:315:27: ( LOWER | UPPER | NUMBER | '_' )*
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:315:27: ( LOWER | UPPER | NUMBER | '_' )*
 			loop1:
 			while (true) {
 				int alt1=2;
@@ -934,7 +934,7 @@ public class MiniJavaLexer extends Lexer {
 
 				switch (alt1) {
 				case 1 :
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:
 					{
 					if ( (input.LA(1) >= '0' && input.LA(1) <= '9')||(input.LA(1) >= 'A' && input.LA(1) <= 'Z')||input.LA(1)=='_'||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
 						input.consume();
@@ -966,10 +966,10 @@ public class MiniJavaLexer extends Lexer {
 	// $ANTLR start "NEWLINE"
 	public final void mNEWLINE() throws RecognitionException {
 		try {
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:316:17: ( ( '\\r' )? '\\n' )
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:316:18: ( '\\r' )? '\\n'
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:316:17: ( ( '\\r' )? '\\n' )
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:316:18: ( '\\r' )? '\\n'
 			{
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:316:18: ( '\\r' )?
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:316:18: ( '\\r' )?
 			int alt2=2;
 			int LA2_0 = input.LA(1);
 			if ( (LA2_0=='\r') ) {
@@ -977,7 +977,7 @@ public class MiniJavaLexer extends Lexer {
 			}
 			switch (alt2) {
 				case 1 :
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:316:18: '\\r'
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:316:18: '\\r'
 					{
 					match('\r'); 
 					}
@@ -1000,7 +1000,7 @@ public class MiniJavaLexer extends Lexer {
 		try {
 			int _type = INT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:317:5: ( '0' | ( NONNULL ( NUMBER )* ) )
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:317:5: ( '0' | ( NONNULL ( NUMBER )* ) )
 			int alt4=2;
 			int LA4_0 = input.LA(1);
 			if ( (LA4_0=='0') ) {
@@ -1018,20 +1018,20 @@ public class MiniJavaLexer extends Lexer {
 
 			switch (alt4) {
 				case 1 :
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:317:7: '0'
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:317:7: '0'
 					{
 					match('0'); 
 					}
 					break;
 				case 2 :
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:317:13: ( NONNULL ( NUMBER )* )
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:317:13: ( NONNULL ( NUMBER )* )
 					{
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:317:13: ( NONNULL ( NUMBER )* )
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:317:15: NONNULL ( NUMBER )*
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:317:13: ( NONNULL ( NUMBER )* )
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:317:15: NONNULL ( NUMBER )*
 					{
 					mNONNULL(); 
 
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:317:23: ( NUMBER )*
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:317:23: ( NUMBER )*
 					loop3:
 					while (true) {
 						int alt3=2;
@@ -1042,7 +1042,7 @@ public class MiniJavaLexer extends Lexer {
 
 						switch (alt3) {
 						case 1 :
-							// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:
+							// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:
 							{
 							if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
 								input.consume();
@@ -1078,7 +1078,7 @@ public class MiniJavaLexer extends Lexer {
 	// $ANTLR start "CHAR"
 	public final void mCHAR() throws RecognitionException {
 		try {
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:318:15: ( ' ' | '!' | ( '\\u0023' .. '\\u005B' ) | ( '\\u005D' .. '\\u007E' ) | '\\\\\"' | '\\\\\\\\' | '\\\\t' | '\\\\n' )
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:318:15: ( ' ' | '!' | ( '\\u0023' .. '\\u005B' ) | ( '\\u005D' .. '\\u007E' ) | '\\\\\"' | '\\\\\\\\' | '\\\\t' | '\\\\n' )
 			int alt5=8;
 			switch ( input.LA(1) ) {
 			case ' ':
@@ -1233,19 +1233,19 @@ public class MiniJavaLexer extends Lexer {
 			}
 			switch (alt5) {
 				case 1 :
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:318:17: ' '
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:318:17: ' '
 					{
 					match(' '); 
 					}
 					break;
 				case 2 :
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:318:23: '!'
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:318:23: '!'
 					{
 					match('!'); 
 					}
 					break;
 				case 3 :
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:318:29: ( '\\u0023' .. '\\u005B' )
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:318:29: ( '\\u0023' .. '\\u005B' )
 					{
 					if ( (input.LA(1) >= '#' && input.LA(1) <= '[') ) {
 						input.consume();
@@ -1258,7 +1258,7 @@ public class MiniJavaLexer extends Lexer {
 					}
 					break;
 				case 4 :
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:318:52: ( '\\u005D' .. '\\u007E' )
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:318:52: ( '\\u005D' .. '\\u007E' )
 					{
 					if ( (input.LA(1) >= ']' && input.LA(1) <= '~') ) {
 						input.consume();
@@ -1271,28 +1271,28 @@ public class MiniJavaLexer extends Lexer {
 					}
 					break;
 				case 5 :
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:318:75: '\\\\\"'
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:318:75: '\\\\\"'
 					{
 					match("\\\""); 
 
 					}
 					break;
 				case 6 :
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:318:83: '\\\\\\\\'
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:318:83: '\\\\\\\\'
 					{
 					match("\\\\"); 
 
 					}
 					break;
 				case 7 :
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:318:92: '\\\\t'
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:318:92: '\\\\t'
 					{
 					match("\\t"); 
 
 					}
 					break;
 				case 8 :
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:318:100: '\\\\n'
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:318:100: '\\\\n'
 					{
 					match("\\n"); 
 
@@ -1312,11 +1312,11 @@ public class MiniJavaLexer extends Lexer {
 		try {
 			int _type = STRING;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:319:8: ( '\"' ( CHAR )* '\"' )
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:319:10: '\"' ( CHAR )* '\"'
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:319:8: ( '\"' ( CHAR )* '\"' )
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:319:10: '\"' ( CHAR )* '\"'
 			{
 			match('\"'); 
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:319:14: ( CHAR )*
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:319:14: ( CHAR )*
 			loop6:
 			while (true) {
 				int alt6=2;
@@ -1327,7 +1327,7 @@ public class MiniJavaLexer extends Lexer {
 
 				switch (alt6) {
 				case 1 :
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:319:14: CHAR
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:319:14: CHAR
 					{
 					mCHAR(); 
 
@@ -1356,10 +1356,10 @@ public class MiniJavaLexer extends Lexer {
 		try {
 			int _type = COMMENT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:320:9: ( ( '//' ( . )* NEWLINE | '/*' ( . )* '*/' ) )
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:320:11: ( '//' ( . )* NEWLINE | '/*' ( . )* '*/' )
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:320:9: ( ( '//' ( . )* NEWLINE | '/*' ( . )* '*/' ) )
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:320:11: ( '//' ( . )* NEWLINE | '/*' ( . )* '*/' )
 			{
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:320:11: ( '//' ( . )* NEWLINE | '/*' ( . )* '*/' )
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:320:11: ( '//' ( . )* NEWLINE | '/*' ( . )* '*/' )
 			int alt9=2;
 			int LA9_0 = input.LA(1);
 			if ( (LA9_0=='/') ) {
@@ -1393,11 +1393,11 @@ public class MiniJavaLexer extends Lexer {
 
 			switch (alt9) {
 				case 1 :
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:320:13: '//' ( . )* NEWLINE
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:320:13: '//' ( . )* NEWLINE
 					{
 					match("//"); 
 
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:320:18: ( . )*
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:320:18: ( . )*
 					loop7:
 					while (true) {
 						int alt7=2;
@@ -1414,7 +1414,7 @@ public class MiniJavaLexer extends Lexer {
 
 						switch (alt7) {
 						case 1 :
-							// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:320:18: .
+							// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:320:18: .
 							{
 							matchAny(); 
 							}
@@ -1430,11 +1430,11 @@ public class MiniJavaLexer extends Lexer {
 					}
 					break;
 				case 2 :
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:320:31: '/*' ( . )* '*/'
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:320:31: '/*' ( . )* '*/'
 					{
 					match("/*"); 
 
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:320:36: ( . )*
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:320:36: ( . )*
 					loop8:
 					while (true) {
 						int alt8=2;
@@ -1455,7 +1455,7 @@ public class MiniJavaLexer extends Lexer {
 
 						switch (alt8) {
 						case 1 :
-							// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:320:36: .
+							// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:320:36: .
 							{
 							matchAny(); 
 							}
@@ -1490,10 +1490,10 @@ public class MiniJavaLexer extends Lexer {
 		try {
 			int _type = WHITESPACE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:321:13: ( ( ' ' | '\\t' | NEWLINE )+ )
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:321:17: ( ' ' | '\\t' | NEWLINE )+
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:321:13: ( ( ' ' | '\\t' | NEWLINE )+ )
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:321:17: ( ' ' | '\\t' | NEWLINE )+
 			{
-			// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:321:17: ( ' ' | '\\t' | NEWLINE )+
+			// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:321:17: ( ' ' | '\\t' | NEWLINE )+
 			int cnt10=0;
 			loop10:
 			while (true) {
@@ -1518,19 +1518,19 @@ public class MiniJavaLexer extends Lexer {
 				}
 				switch (alt10) {
 				case 1 :
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:321:19: ' '
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:321:19: ' '
 					{
 					match(' '); 
 					}
 					break;
 				case 2 :
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:321:25: '\\t'
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:321:25: '\\t'
 					{
 					match('\t'); 
 					}
 					break;
 				case 3 :
-					// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:321:32: NEWLINE
+					// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:321:32: NEWLINE
 					{
 					mNEWLINE(); 
 
@@ -1559,292 +1559,292 @@ public class MiniJavaLexer extends Lexer {
 
 	@Override
 	public void mTokens() throws RecognitionException {
-		// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:1:8: ( T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | IDENT | INT | STRING | COMMENT | WHITESPACE )
+		// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:1:8: ( T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | T__47 | T__48 | T__49 | T__50 | IDENT | INT | STRING | COMMENT | WHITESPACE )
 		int alt11=41;
 		alt11 = dfa11.predict(input);
 		switch (alt11) {
 			case 1 :
-				// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:1:10: T__15
+				// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:1:10: T__15
 				{
 				mT__15(); 
 
 				}
 				break;
 			case 2 :
-				// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:1:16: T__16
+				// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:1:16: T__16
 				{
 				mT__16(); 
 
 				}
 				break;
 			case 3 :
-				// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:1:22: T__17
+				// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:1:22: T__17
 				{
 				mT__17(); 
 
 				}
 				break;
 			case 4 :
-				// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:1:28: T__18
+				// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:1:28: T__18
 				{
 				mT__18(); 
 
 				}
 				break;
 			case 5 :
-				// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:1:34: T__19
+				// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:1:34: T__19
 				{
 				mT__19(); 
 
 				}
 				break;
 			case 6 :
-				// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:1:40: T__20
+				// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:1:40: T__20
 				{
 				mT__20(); 
 
 				}
 				break;
 			case 7 :
-				// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:1:46: T__21
+				// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:1:46: T__21
 				{
 				mT__21(); 
 
 				}
 				break;
 			case 8 :
-				// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:1:52: T__22
+				// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:1:52: T__22
 				{
 				mT__22(); 
 
 				}
 				break;
 			case 9 :
-				// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:1:58: T__23
+				// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:1:58: T__23
 				{
 				mT__23(); 
 
 				}
 				break;
 			case 10 :
-				// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:1:64: T__24
+				// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:1:64: T__24
 				{
 				mT__24(); 
 
 				}
 				break;
 			case 11 :
-				// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:1:70: T__25
+				// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:1:70: T__25
 				{
 				mT__25(); 
 
 				}
 				break;
 			case 12 :
-				// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:1:76: T__26
+				// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:1:76: T__26
 				{
 				mT__26(); 
 
 				}
 				break;
 			case 13 :
-				// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:1:82: T__27
+				// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:1:82: T__27
 				{
 				mT__27(); 
 
 				}
 				break;
 			case 14 :
-				// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:1:88: T__28
+				// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:1:88: T__28
 				{
 				mT__28(); 
 
 				}
 				break;
 			case 15 :
-				// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:1:94: T__29
+				// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:1:94: T__29
 				{
 				mT__29(); 
 
 				}
 				break;
 			case 16 :
-				// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:1:100: T__30
+				// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:1:100: T__30
 				{
 				mT__30(); 
 
 				}
 				break;
 			case 17 :
-				// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:1:106: T__31
+				// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:1:106: T__31
 				{
 				mT__31(); 
 
 				}
 				break;
 			case 18 :
-				// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:1:112: T__32
+				// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:1:112: T__32
 				{
 				mT__32(); 
 
 				}
 				break;
 			case 19 :
-				// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:1:118: T__33
+				// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:1:118: T__33
 				{
 				mT__33(); 
 
 				}
 				break;
 			case 20 :
-				// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:1:124: T__34
+				// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:1:124: T__34
 				{
 				mT__34(); 
 
 				}
 				break;
 			case 21 :
-				// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:1:130: T__35
+				// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:1:130: T__35
 				{
 				mT__35(); 
 
 				}
 				break;
 			case 22 :
-				// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:1:136: T__36
+				// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:1:136: T__36
 				{
 				mT__36(); 
 
 				}
 				break;
 			case 23 :
-				// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:1:142: T__37
+				// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:1:142: T__37
 				{
 				mT__37(); 
 
 				}
 				break;
 			case 24 :
-				// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:1:148: T__38
+				// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:1:148: T__38
 				{
 				mT__38(); 
 
 				}
 				break;
 			case 25 :
-				// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:1:154: T__39
+				// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:1:154: T__39
 				{
 				mT__39(); 
 
 				}
 				break;
 			case 26 :
-				// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:1:160: T__40
+				// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:1:160: T__40
 				{
 				mT__40(); 
 
 				}
 				break;
 			case 27 :
-				// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:1:166: T__41
+				// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:1:166: T__41
 				{
 				mT__41(); 
 
 				}
 				break;
 			case 28 :
-				// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:1:172: T__42
+				// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:1:172: T__42
 				{
 				mT__42(); 
 
 				}
 				break;
 			case 29 :
-				// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:1:178: T__43
+				// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:1:178: T__43
 				{
 				mT__43(); 
 
 				}
 				break;
 			case 30 :
-				// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:1:184: T__44
+				// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:1:184: T__44
 				{
 				mT__44(); 
 
 				}
 				break;
 			case 31 :
-				// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:1:190: T__45
+				// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:1:190: T__45
 				{
 				mT__45(); 
 
 				}
 				break;
 			case 32 :
-				// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:1:196: T__46
+				// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:1:196: T__46
 				{
 				mT__46(); 
 
 				}
 				break;
 			case 33 :
-				// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:1:202: T__47
+				// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:1:202: T__47
 				{
 				mT__47(); 
 
 				}
 				break;
 			case 34 :
-				// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:1:208: T__48
+				// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:1:208: T__48
 				{
 				mT__48(); 
 
 				}
 				break;
 			case 35 :
-				// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:1:214: T__49
+				// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:1:214: T__49
 				{
 				mT__49(); 
 
 				}
 				break;
 			case 36 :
-				// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:1:220: T__50
+				// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:1:220: T__50
 				{
 				mT__50(); 
 
 				}
 				break;
 			case 37 :
-				// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:1:226: IDENT
+				// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:1:226: IDENT
 				{
 				mIDENT(); 
 
 				}
 				break;
 			case 38 :
-				// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:1:232: INT
+				// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:1:232: INT
 				{
 				mINT(); 
 
 				}
 				break;
 			case 39 :
-				// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:1:236: STRING
+				// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:1:236: STRING
 				{
 				mSTRING(); 
 
 				}
 				break;
 			case 40 :
-				// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:1:243: COMMENT
+				// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:1:243: COMMENT
 				{
 				mCOMMENT(); 
 
 				}
 				break;
 			case 41 :
-				// /Users/probst/workspace/MiniJava_A5/src/compiler/Frontend/MiniJava.g:1:251: WHITESPACE
+				// /Users/probst/workspace/MiniJava_A6/src/compiler/Frontend/MiniJava.g:1:251: WHITESPACE
 				{
 				mWHITESPACE(); 
 

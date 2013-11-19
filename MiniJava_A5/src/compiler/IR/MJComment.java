@@ -3,6 +3,8 @@ package compiler.IR;
 import java.util.HashSet;
 
 import compiler.PrettyPrinter;
+import compiler.CODE.CODE;
+import compiler.Exceptions.CodeGenException;
 import compiler.Exceptions.TypeCheckerException;
 
 public class MJComment extends MJStatement {
@@ -23,11 +25,21 @@ public class MJComment extends MJStatement {
 		return MJType.getVoidType();
 	}
 	
+	public void rewriteTwo() {
+	}
+
 	void variableInit(HashSet<MJVariable> initialized)
 			throws TypeCheckerException {
 
 		// nothing to do here
 		return;
+	}
+
+	public int requiredStackSize() { 
+		return 0;
+	}
+
+	public void generateCode(CODE code) throws CodeGenException {
 	}
 
 }

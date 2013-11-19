@@ -2,11 +2,8 @@ class testmain {
 	
 	public static void main(String[] args) {
 		
-		A a;
-		B b;
-		
-		a = new A();
-		b = new B();
+		A a = new A();
+		B b = new B();
 		
 		b = a;
 	}

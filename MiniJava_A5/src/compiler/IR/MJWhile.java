@@ -3,6 +3,9 @@ package compiler.IR;
 import java.util.HashSet;
 
 import compiler.PrettyPrinter;
+import compiler.CODE.CODE;
+import compiler.CODE.LC3.*;
+import compiler.Exceptions.CodeGenException;
 import compiler.Exceptions.TypeCheckerException;
 
 public class MJWhile extends MJStatement {
@@ -19,10 +22,6 @@ public class MJWhile extends MJStatement {
 		return this.body;
 	}
 
-	public MJExpression getCondition() {
-		return condition;
-	}
-
 	public void prettyPrint(PrettyPrinter prepri) {
 		prepri.print("while (");
 		this.condition.prettyPrint(prepri);
@@ -30,26 +29,50 @@ public class MJWhile extends MJStatement {
 		this.body.prettyPrint(prepri);
 	}
 	
+	public void rewriteTwo() {
+		this.condition = condition.rewriteTwo();
+		
+		this.body.rewriteTwo();
+	}
+
 	MJType typeCheck() throws TypeCheckerException {
 		
-		// checks if the condition is of type booleans
-		if(this.condition.typeCheck().isBoolean())
-		{
-			this.body.typeCheck();	
+		// condition must be boolean
+		
+		MJType condType = this.condition.typeCheck();
+		
+		if (!condType.isBoolean()) {
+			throw new TypeCheckerException("type of condition must be boolean");
 		}
-		else
-		{
-			throw new TypeCheckerException("condition must be of type boolean");
-		}
+		
+		// and body must be typechecked
+		
+		this.body.typeCheck();
+		
 		return MJType.getVoidType();
 	}
 
 	void variableInit(HashSet<MJVariable> initialized)
 			throws TypeCheckerException {
 		
+		// check condition
+		
 		this.condition.variableInit(initialized);
-		this.body.variableInit(initialized);
-		// here you should enter the code to check whether all variables are initialized
+		
+		// check body of while with a new copy of initialized 
+		
+		HashSet<MJVariable> bodyset = (HashSet<MJVariable>) initialized.clone();
+		this.body.variableInit(bodyset);
+	}
+
+	public int requiredStackSize() { 
+		return Math.max(this.condition.requiredStackSize(), 1 + this.body.requiredStackSize());
+	}
+
+	public void generateCode(CODE code) throws CodeGenException {
+
+		code.comment(" WHILE BEGIN ");
+		code.comment(" WHILE END");
 	}
 
 }

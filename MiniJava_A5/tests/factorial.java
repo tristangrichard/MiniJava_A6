@@ -2,11 +2,12 @@ class testmain {
 	
 	public static void main(String[] args) {
 		A a;
-		int x;		
+		int x;
 
 		a = new A();
-		x = a.test(4);		
 
+		x = a.test(4);		
+                
 		System.out.println(x);
 	}
 }

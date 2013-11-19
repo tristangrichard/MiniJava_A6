@@ -2,9 +2,22 @@ package compiler.IR;
 
 import java.util.HashSet;
 import java.util.LinkedList;
+
 import compiler.PrettyPrinter;
+import compiler.CODE.CODE;
+import compiler.CODE.LC3.LC3ADD;
+import compiler.CODE.LC3.LC3BR;
+import compiler.CODE.LC3.LC3JSRR;
+import compiler.CODE.LC3.LC3LD;
+import compiler.CODE.LC3.LC3LDR;
+import compiler.CODE.LC3.LC3ST;
+import compiler.CODE.LC3.LC3STR;
+import compiler.CODE.LC3.LC3int;
+import compiler.CODE.LC3.LC3label;
+import compiler.CODE.LC3.LC3labeldata;
 import compiler.Exceptions.ClassErrorMethod;
 import compiler.Exceptions.ClassNotFound;
+import compiler.Exceptions.CodeGenException;
 import compiler.Exceptions.MethodNotFound;
 import compiler.Exceptions.TypeCheckerException;
 import compiler.Exceptions.VariableNotFound;
@@ -13,8 +26,9 @@ public class MJMethodCallExpr extends MJExpression {
 
 	private MJIdentifier method;
 	private LinkedList<MJExpression> arglist;
-	private MJMethod target;
 
+	private MJMethod target;
+	
 	public MJMethodCallExpr(MJIdentifier m, LinkedList<MJExpression> arglist) {
 		this.method = m;
 		this.arglist = arglist;
@@ -37,57 +51,150 @@ public class MJMethodCallExpr extends MJExpression {
 		}
 		prepri.print(")");
 	}
+	
+	public MJExpression rewriteTwo() {
+		
+		MJSelector sel;
+		
+		if (!(this.method instanceof MJSelector)) {
+			MJIdentifier id = new MJIdentifier("this");
+			MJType t = MJType.getClassType(IR.currentClass);
+			id.setType(t);
+			id.setDecl(IR.currentMethod.getParameters().getFirst());
+
+			sel = new MJSelector(id, this.method);
+		} else {
+			sel = (MJSelector) this.method;
+		}
+		
+		int position = 0;
+		for (MJExpression arg : arglist) {
+			arg = arg.rewriteTwo();
+			arglist.add(position, arg);
+			arglist.remove(position+1);
+		}
+		
+		// now we add a this argument to non-static method calls
+		
+		if (!this.target.isStatic()) {
+			MJIdentifier thisid = sel.getObject();			
+			this.arglist.addFirst(thisid);
+		}
+
+		return this;
+	}
 
 	MJType typeCheck() throws TypeCheckerException {
 
-		MJClass decl = null;
-		MJClass cla = IR.currentClass;
-		MJIdentifier ident = this.method;
-		MJMethod meth;
+		MJClass defclass = IR.currentClass;
+		MJMethod method;
+		
+		MJIdentifier id = this.method;
+		
+		if (id instanceof MJSelector) {
+			MJSelector sel = (MJSelector)id;
+			MJType objType = sel.getObject().typeCheck();
 
-		if(ident instanceof MJSelector){
-
-			MJSelector sel = (MJSelector) ident;
-			MJType type = sel.getObject().typeCheck();
-
-			if(ident.getType().isClass()){
-				decl = sel.getObject().typeCheck().getDecl();
-				cla = type.getDecl();
-				ident = sel.getField();
-			}else throw	new TypeCheckerException(ident.getName()+" is not a Class");
-		}else {
-			if(ident.getName().equals("this"))
-			{
-				// Something should happen here
-			}else if (ident.getName().equals("super"))
-			{
-				// Something should happen here
+			if (!objType.isClass()) {
+				throw new TypeCheckerException("Baseobject in selector must have class type.");
 			}
+
+			defclass = objType.getDecl();
+			
+			id = sel.getField();
 		}
-		for(MJExpression args : arglist)
-		{
-			args.typeCheck();
+		
+		for (MJExpression arg : this.arglist) {
+			arg.typeCheck();
 		}
 
 		try {
-			meth = IR.classes.lookupMethod(decl, cla.getName(), arglist);
+			method = IR.classes.lookupMethod(defclass, id.getName(), arglist);
 		} catch (ClassErrorMethod e) {
-			throw new TypeCheckerException(e.getMessage());
+			throw new TypeCheckerException("No matching class found.");
 		} catch (MethodNotFound e) {
-			throw new TypeCheckerException(e.getMessage());
+			throw new TypeCheckerException("No matching method found.");
 		}
-		this.type = meth.getReturnType();
-		this.target = meth;
+
+		this.target = method;
+		this.type = method.getType();
+		
 		return this.type;
 	}
 
 	void variableInit(HashSet<MJVariable> initialized)
 			throws TypeCheckerException {
 
-		this.method.variableInit(initialized);
+		MJIdentifier id = this.method;
 		
-		for(MJExpression arg : arglist){
+		if (id instanceof MJSelector) {
+			
+			MJSelector sel = (MJSelector)id;
+
+			sel.getObject().variableInit(initialized);
+
+		}
+		
+		for (MJExpression arg : arglist) {
 			arg.variableInit(initialized);
 		}
+
 	}
+
+	public int requiredStackSize() {
+		
+		int maxsize = 0;
+		
+		maxsize += this.arglist.size();
+		
+		for (MJExpression arg : this.arglist) {
+			maxsize += arg.requiredStackSize();
+		}
+		
+		maxsize += 6;
+		maxsize += 1;
+		
+		return maxsize;
+	}
+
+	public void generateCode(CODE code) throws CodeGenException {
+		code.comment(" CALL "+this.target.getName());
+		LC3label blab = code.newLabel();
+		LC3label dlab = code.newLabel();
+		LC3label mlab = code.newLabel();
+		code.add(new LC3BR(blab));
+		code.commentline(" slot for SP ");
+		code.add(dlab);
+		code.add(new LC3int(0));
+		code.commentline(" address of method to call ");
+		code.add(mlab);
+		code.add(new LC3labeldata( this.target.getLabel()));
+		code.add(blab);
+		code.commentline(" save SP ");
+		code.add(new LC3ST(CODE.SP, dlab));
+		code.commentline(" save SFP ");
+		code.add(new LC3STR(CODE.SFP, CODE.SP, 1));
+		code.commentline(" increment SP to save arguments and make space for admin area ");
+		code.add(new LC3ADD(CODE.SP, CODE.SP, 3));
+		code.commentline(" push arguments ");
+		
+		for (MJExpression arg : this.arglist) {
+			code.commentline(" argument ");
+			arg.generateCode(code);
+		}
+
+		code.commentline(" set new SFP (this is the old SP)");
+		code.add(new LC3LD(CODE.SFP, dlab));
+		code.commentline(" get method address and jump to it");
+		code.add(new LC3LD(CODE.TMP0, mlab));
+		code.add(new LC3JSRR( CODE.TMP0 ));
+		code.commentline(" once returned reset SP (this is the SFP)");
+		code.add( new LC3ADD(CODE.SP, CODE.SFP, 0));
+		code.commentline(" restore the old SFP - this was stored at offset one from the SFP");
+		code.add( new LC3LDR(CODE.SFP, CODE.SFP, 1));
+		code.commentline(" the first cell on the stack contains the result, so increase SP by one");
+		code.add(new LC3ADD(CODE.SP, CODE.SP, 1));
+		code.comment(" CALL END "+this.target.getName());
+	}
+
 }

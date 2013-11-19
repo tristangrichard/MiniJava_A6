@@ -3,6 +3,8 @@ package compiler.IR;
 import java.util.HashSet;
 
 import compiler.PrettyPrinter;
+import compiler.CODE.CODE;
+import compiler.CODE.LC3.*;
 import compiler.Exceptions.*;
 
 public class MJAnd extends MJBinaryOp {
@@ -45,6 +47,18 @@ public class MJAnd extends MJBinaryOp {
 		// check both arguments
 		this.lhs.variableInit(initialized);
 		this.rhs.variableInit(initialized);
+	}
+
+	public void generateCode(CODE code) throws CodeGenException {
+		code.comment(" ADD BEGIN ");
+		code.commentline(" ADD lhs ");
+		this.lhs.generateCode(code);
+		code.commentline(" ADD rhs ");
+		this.rhs.generateCode(code);
+		code.pop2(CODE.TMP0, CODE.TMP1);
+		code.add(new LC3AND(CODE.TMP0, CODE.TMP0, CODE.TMP1));
+		code.push( CODE.TMP0 );
+		code.comment(" ADD END ");
 	}
 
 }

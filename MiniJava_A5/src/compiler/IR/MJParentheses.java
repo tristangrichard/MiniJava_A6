@@ -3,6 +3,8 @@ package compiler.IR;
 import java.util.HashSet;
 
 import compiler.PrettyPrinter;
+import compiler.CODE.CODE;
+import compiler.Exceptions.CodeGenException;
 import compiler.Exceptions.TypeCheckerException;
 
 public class MJParentheses extends MJExpression {
@@ -19,6 +21,11 @@ public class MJParentheses extends MJExpression {
 		prepri.print(" )");
 	}
 
+	public MJExpression rewriteTwo() {
+		this.exp = exp.rewriteTwo();
+		return this;
+	}
+
 	MJType typeCheck() throws TypeCheckerException {
 		
 		// typecheck the argument
@@ -32,6 +39,15 @@ public class MJParentheses extends MJExpression {
 		
 		// check the argument
 		this.exp.variableInit(initialized);
+	}
+
+	public int requiredStackSize() { 
+		return this.exp.requiredStackSize();
+	}
+
+	public void generateCode(CODE code) throws CodeGenException {
+		code.commentline(" PARENTHESES ");
+		this.exp.generateCode(code);
 	}
 
 }

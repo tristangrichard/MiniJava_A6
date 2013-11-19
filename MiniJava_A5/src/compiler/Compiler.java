@@ -1,8 +1,10 @@
 package compiler;
 
 import compiler.Exceptions.*;
+import compiler.Phases.Backend;
 import compiler.Phases.Analysis;
 import compiler.Phases.Frontend;
+import compiler.Phases.Rewrite;
 import compiler.IR.*;
 
 public class Compiler {
@@ -37,8 +39,8 @@ public class Compiler {
 			help();
 		}
 
-		Compiler.filename = null;
-		Compiler.debug = false;
+		this.filename = null;
+		this.debug = false;
 
 		for (int i=0;i<args.length;i++) {
 			String arg = args[i];
@@ -48,11 +50,11 @@ public class Compiler {
 				// store the filename
 				//
 
-				Compiler.filename = args[i];
-				Compiler.outputfilename = Compiler.filename.substring(0, Compiler.filename.lastIndexOf('.'))+".asm";
+				this.filename = args[i];
+				this.outputfilename = this.filename.substring(0, this.filename.lastIndexOf('.'))+".asm";
 			} else {
 				if (arg.equals("-v")) {
-					Compiler.debug=true;
+					this.debug=true;
 					continue;
 				}
 				if (arg.equals("-o")) {
@@ -61,7 +63,7 @@ public class Compiler {
 						throw new CompilerError("argument for -o is missing");
 					}
 					
-					Compiler.outputfilename = args[i++];
+					this.outputfilename = args[i++];
 					continue;
 				}
 				if (arg.equals("--")) {
@@ -76,7 +78,7 @@ public class Compiler {
 			}
 		}
 		
-		if (Compiler.filename == null) {
+		if (this.filename == null) {
 			throw new CompilerError("No filename specified");
 		}
 
@@ -89,18 +91,22 @@ public class Compiler {
 		System.out.print("Parsing... ");
 
 		try {
-			ir = Frontend.parse(Compiler.filename);
+			ir = Frontend.parse(this.filename);
 		} catch (ParseError e) {
 			throw new CompilerError("Parse Error: "+e.getMessage());
 		}
 		
 		System.out.println("done.");
 		
-		if (Compiler.isDebug()) {
+		if (this.isDebug()) {
 			ir.prettyPrint();
 		}
 		
-		if (Compiler.isDebug()) {
+		System.out.println("Rewriting 1... ");
+		Rewrite.rewriteOne(ir);
+		System.out.println("done.");
+
+		if (this.isDebug()) {
 			ir.prettyPrint();
 		}
 		
@@ -114,9 +120,23 @@ public class Compiler {
 
 		System.out.println("done.");
 		
-		if (Compiler.isDebug()) {
+		System.out.println("Rewriting 2... ");
+		Rewrite.rewriteTwo(ir);
+		System.out.println("done.");
+
+		if (this.isDebug()) {
 			ir.prettyPrint();
 		}
+				
+		System.out.println("Generating code... ");
+
+		try {
+			Backend.generate(ir);
+		} catch (CodeGenException e) {
+			throw new CompilerError("CodeGenError "+e.getMessage());
+		}
+		
+		System.out.println("done.");
 	}
 	
 	private void help() {
@@ -125,9 +145,10 @@ public class Compiler {
 		System.err.println("MiniJava compiler\n");
 		System.err.println("====================\n\n");
 		System.err.println("Invoke with \"java -jar path/to/jar/file \" or via GUI.");
-		System.err.println("arguments: [-v] filename\n\n");
+		System.err.println("arguments: [-v] filename -- args\n\n");
 		System.err.println("  -v            be verbose\n");
 		System.err.println("  filename      source filename\n");
+		System.err.println("  args          arguments passed on to Java program\n");
 		System.exit(-1);
 	}
 
