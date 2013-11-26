@@ -63,15 +63,16 @@ public class MJMult extends MJBinaryOp {
 		this.rhs.generateCode(code);
 		
 		code.commentline( "Multiply integers");
-		code.pop2(CODE.TMP0, CODE.TMP1);
-		code.add(new LC3AND(CODE.TMP1, CODE.TMP1, CODE.TMP1));
-		code.comment(" Branch to cont if multipier is positive ");
-		code.add(new LC3BRP(cont)); // Branch to cont if TMP1 is positive
-		code.comment(" Branch to retu if second multipier is zero. ");
-		code.add(new LC3BRZ(retu)); // Branch to retu if TMP1 is zero
+		code.pop2(CODE.TMP0, CODE.TMP1); // get value of both sides
 		code.add(new LC3AND(CODE.TMP0, CODE.TMP0, CODE.TMP0));
 		code.comment(" Branch to retu if first multipier is zero. ");
 		code.add(new LC3BRZ(retu)); // Branch to retu if TMP0 is zero
+		code.add(new LC3AND(CODE.TMP1, CODE.TMP1, CODE.TMP1));
+		code.comment(" Branch to retu if second multipier is zero. ");
+		code.add(new LC3BRZ(retu)); // Branch to retu if TMP1 is zero
+		code.comment(" Branch to cont if multipier is positive ");
+		code.add(new LC3BRP(cont)); // Branch to cont if TMP1 is positive
+		
 		code.comment(" Notting the negative multiplier for the loop count. ");
 		code.add(new LC3AND(CODE.CONST1,CODE.CONST1,0)); // Clear CONST1
 		code.add(new LC3ADD(CODE.CONST1,CODE.CONST1,CODE.TMP1)); // Copy TMP1 into CONST1

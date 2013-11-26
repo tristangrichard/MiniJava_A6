@@ -57,10 +57,11 @@ public class MJMinus extends MJBinaryOp {
 		this.rhs.generateCode(code);
 		
 		code.commentline("MINUS");
-		code.pop2(CODE.TMP0, CODE.TMP1);
-		code.add(new LC3NOT(CODE.TMP1, CODE.TMP1));
-		code.add(new LC3ADD(CODE.TMP0, CODE.TMP0, CODE.TMP1));
-		code.push(CODE.TMP0);
+		code.pop2(CODE.TMP0, CODE.TMP1); // get value of left and right hand side
+		code.add(new LC3NOT(CODE.TMP1, CODE.TMP1)); // Not right hand side
+		code.add(new LC3ADD(CODE.TMP1,CODE.TMP1,1)); // Add 1 to result of NOT opreation
+		code.add(new LC3ADD(CODE.TMP0, CODE.TMP0, CODE.TMP1)); // Evalute addition operation
+		code.push(CODE.TMP0); // Push result
 		
 		code.comment(" MINUS END ");
 	}
