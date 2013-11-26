@@ -48,8 +48,10 @@ public class MJNegate extends MJUnaryOp {
 			this.arg.generateCode(code);
 			code.commentline("Negate");
 			code.pop(CODE.TMP0); // Get value of variable
-			code.add(new LC3NOT(CODE.TMP0, CODE.TMP0)); // Notting TMP0
-			code.add(new LC3ADD(CODE.TMP0,CODE.TMP0,1)); // Adding 1 to the result of NOT operation
+			
+			code.add(new LC3NOT(CODE.TMP0,CODE.TMP0));
+			code.add(new LC3AND(CODE.TMP0,CODE.TMP0,1));
+			
 			code.push(CODE.TMP0); // Push result of negation
 		
 		code.comment(" NEGATE END ");

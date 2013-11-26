@@ -74,7 +74,16 @@ public class MJIf extends MJStatement {
 
 	public void generateCode(CODE code) throws CodeGenException {
 		
+		LC3label ifFalse = code.newLabel();
+		this.condition.generateCode(code);
+		
 		code.comment(" IF ");
+		code.pop(CODE.TMP0); // Get value of variable
+		code.add(new LC3BRZ(ifFalse)); // Branch to ifFalse if 0
+		
+		this.thenblock.generateCode(code); 
+		
+		code.add(ifFalse);
 		code.comment(" IF END ");
 	}
 }

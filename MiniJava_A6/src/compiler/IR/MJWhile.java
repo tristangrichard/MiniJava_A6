@@ -71,7 +71,20 @@ public class MJWhile extends MJStatement {
 
 	public void generateCode(CODE code) throws CodeGenException {
 
+		LC3label whileFalse = code.newLabel();
+		LC3label loop = code.newLabel();
+		
 		code.comment(" WHILE BEGIN ");
+		code.add(loop);
+		this.condition.generateCode(code);
+		code.pop(CODE.TMP0); // Get value of variable
+		
+		code.add(new LC3BRZ(whileFalse)); // Branch to ifFalse if 0
+		
+		this.body.generateCode(code); 
+		code.add(new LC3BR(loop));
+		
+		code.add(whileFalse);
 		code.comment(" WHILE END");
 	}
 
